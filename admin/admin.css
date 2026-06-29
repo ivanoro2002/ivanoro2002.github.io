@@ -2,10 +2,10 @@
   --dark: #0b1312;
   --dark-2: #13211f;
   --paper: #ffffff;
-  --bg: #f5f7f2;
+  --bg: #eefaf3;
   --ink: #111c1a;
-  --muted: #5e6b67;
-  --line: rgba(23, 33, 31, 0.14);
+  --muted: #49645c;
+  --line: rgba(18, 134, 93, 0.18);
   --green: #20c978;
   --green-2: #12865d;
   --blue: #67b7ff;
@@ -26,7 +26,10 @@ body {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 8% 4%, rgba(32, 201, 120, 0.13), transparent 28%),
+    radial-gradient(circle at 92% 12%, rgba(103, 183, 255, 0.14), transparent 26%),
+    var(--bg);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
 }
@@ -190,9 +193,9 @@ a {
 
 .cms-page {
   background:
-    radial-gradient(circle at top left, rgba(32, 201, 120, 0.18), transparent 34%),
-    radial-gradient(circle at top right, rgba(103, 183, 255, 0.2), transparent 30%),
-    linear-gradient(180deg, #f5f7f2 0%, #e9eee4 100%);
+    radial-gradient(circle at top left, rgba(32, 201, 120, 0.22), transparent 34%),
+    radial-gradient(circle at top right, rgba(103, 183, 255, 0.24), transparent 30%),
+    linear-gradient(180deg, #eefaf3 0%, #ddf7e8 100%);
 }
 
 .cms-brand-bar {
@@ -247,7 +250,7 @@ a {
 .cms-page [class*="ControlPane"],
 .cms-page [class*="EditorControlBar"] {
   background:
-    linear-gradient(180deg, rgba(245, 247, 242, 0.98), rgba(233, 238, 228, 0.96)) !important;
+    linear-gradient(180deg, rgba(238, 250, 243, 0.98), rgba(221, 247, 232, 0.96)) !important;
 }
 
 .cms-page [class*="ControlContainer"],

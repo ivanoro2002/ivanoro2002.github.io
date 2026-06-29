@@ -202,7 +202,7 @@
           "accent": "#d83b01"
         },
         {
-          "name": "Deploy web",
+          "name": "Publicacion web",
           "note": "Publicacion gratuita del portafolio estatico.",
           "icon": "deploy",
           "accent": "#20c978"

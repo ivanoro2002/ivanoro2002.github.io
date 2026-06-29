@@ -184,6 +184,21 @@ const renderHero = () => {
     row.innerHTML = `<i class="focus-dot" aria-hidden="true"></i><span>${item}</span>`;
     focusList.append(row);
   });
+
+  const signal = select("#hero-signal");
+  const skillCount = data.skills.reduce((total, category) => total + category.items.length, 0);
+  const signals = [
+    { value: data.projects.length, label: "proyectos" },
+    { value: skillCount, label: "habilidades" },
+    { value: data.learning?.length || 0, label: "cursos" },
+  ];
+
+  signals.forEach((item) => {
+    const pill = document.createElement("div");
+    pill.className = "signal-pill";
+    pill.innerHTML = `<strong>${item.value}</strong><span>${item.label}</span>`;
+    signal.append(pill);
+  });
 };
 
 const renderAbout = () => {
@@ -217,10 +232,33 @@ const renderOpportunityCards = () => {
 
 const renderProjects = () => {
   const grid = select("#project-grid");
+  const filters = select("#project-filters");
+  const count = select("#project-count");
+  const projectTypes = ["Todos", ...new Set(data.projects.map((project) => project.type))];
+
+  const updateCount = (visibleCount) => {
+    count.textContent = `${visibleCount} proyecto${visibleCount === 1 ? "" : "s"} visible${visibleCount === 1 ? "" : "s"}`;
+  };
+
+  const setProjectFilter = (filter) => {
+    let visibleCount = 0;
+    grid.querySelectorAll(".project-card").forEach((card) => {
+      const isVisible = filter === "Todos" || card.dataset.type === filter;
+      card.classList.toggle("is-hidden", !isVisible);
+      if (isVisible) visibleCount += 1;
+    });
+
+    filters.querySelectorAll(".project-filter").forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.filter === filter));
+    });
+
+    updateCount(visibleCount);
+  };
 
   data.projects.forEach((project) => {
     const card = document.createElement("article");
     card.className = "project-card reveal";
+    card.dataset.type = project.type;
 
     const tags = project.tags.map((tag) => `<li>${tag}</li>`).join("");
     const image = project.image
@@ -250,6 +288,19 @@ const renderProjects = () => {
 
     grid.append(card);
   });
+
+  projectTypes.forEach((type) => {
+    const button = document.createElement("button");
+    button.className = "project-filter";
+    button.type = "button";
+    button.dataset.filter = type;
+    button.textContent = type;
+    button.setAttribute("aria-pressed", String(type === "Todos"));
+    button.addEventListener("click", () => setProjectFilter(type));
+    filters.append(button);
+  });
+
+  updateCount(data.projects.length);
 };
 
 const renderSkills = () => {

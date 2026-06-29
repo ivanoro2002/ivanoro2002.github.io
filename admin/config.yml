@@ -6,6 +6,7 @@ media_folder: "assets/uploads"
 public_folder: "assets/uploads"
 
 local_backend: true
+locale: "es"
 site_url: "https://ivan-portafolioit.netlify.app"
 display_url: "https://ivan-portafolioit.netlify.app"
 
@@ -30,7 +31,7 @@ collections:
               - { label: "Nombre", name: "name", widget: "string" }
               - { label: "Rol", name: "role", widget: "string" }
               - { label: "Ubicacion", name: "location", widget: "string" }
-              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Correo", name: "email", widget: "string" }
               - { label: "Telefono", name: "phone", widget: "string", required: false }
               - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
               - { label: "GitHub", name: "github", widget: "string" }
@@ -104,14 +105,14 @@ collections:
                 summary: "{{fields.tag}}"
                 minimize_collapsed: true
                 field: { label: "Tecnologia", name: "tag", widget: "string" }
-              - label: "Links"
+              - label: "Enlaces"
                 name: "links"
                 widget: "list"
                 summary: "{{fields.label}}"
                 minimize_collapsed: true
                 fields:
                   - { label: "Texto", name: "label", widget: "string" }
-                  - { label: "URL", name: "href", widget: "string", required: false }
+                  - { label: "Enlace", name: "href", widget: "string", required: false }
                   - { label: "Icono", name: "icon", widget: "string", required: false }
 
           - label: "Habilidades"
@@ -146,7 +147,7 @@ collections:
               - { label: "Institucion o plataforma", name: "provider", widget: "string" }
               - { label: "Descripcion", name: "description", widget: "text" }
 
-          - label: "Formacion y timeline"
+          - label: "Formacion y linea de tiempo"
             name: "timeline"
             widget: "list"
             summary: "{{fields.period}} - {{fields.title}}"
@@ -166,8 +167,8 @@ collections:
             fields:
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Descripcion", name: "description", widget: "text" }
-              - { label: "CTA", name: "cta", widget: "string" }
-              - { label: "URL", name: "href", widget: "string", required: false }
+              - { label: "Texto del boton", name: "cta", widget: "string" }
+              - { label: "Enlace", name: "href", widget: "string", required: false }
               - { label: "Icono", name: "icon", widget: "string", required: false }
 
           - label: "Contacto"
@@ -180,5 +181,5 @@ collections:
               - { label: "Texto", name: "label", widget: "string" }
               - { label: "Detalle", name: "detail", widget: "string", required: false }
               - { label: "Icono", name: "icon", widget: "string", required: false }
-              - { label: "URL", name: "href", widget: "string", required: false }
+              - { label: "Enlace", name: "href", widget: "string", required: false }
               - { label: "Accesibilidad", name: "ariaLabel", widget: "string", required: false }
