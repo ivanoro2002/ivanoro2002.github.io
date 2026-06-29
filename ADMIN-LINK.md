@@ -8,7 +8,13 @@ Guardar este archivo como referencia personal.
 http://127.0.0.1:8765/admin/
 ```
 
-## Cuando este publicado
+## Publicado en Netlify
+
+```text
+https://ivan-portafolioit.netlify.app/admin/
+```
+
+## GitHub Pages, si se activa despues
 
 ```text
 https://ivanoro2002.github.io/admin/

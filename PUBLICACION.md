@@ -21,11 +21,19 @@ MANUAL-PUBLICACION-GRATIS.md
 7. Guardar.
 8. Esperar unos minutos.
 
-La URL esperada seria:
+La URL esperada en GitHub Pages seria:
 
 ```text
 https://ivanoro2002.github.io
 ```
+
+La URL publicada en Netlify es:
+
+```text
+https://ivan-portafolioit.netlify.app/
+```
+
+Se puede cambiar el nombre desde Netlify para que quede mas profesional.
 
 ## Seguridad
 
