@@ -282,6 +282,26 @@
       ]
     }
   ],
+  "learning": [
+    {
+      "status": "Realizado",
+      "title": "Curso de Programacion",
+      "provider": "CFL N402",
+      "description": "Formacion inicial para reforzar fundamentos de programacion, logica y practica."
+    },
+    {
+      "status": "Realizado",
+      "title": "Curso de Desarrollo Web",
+      "provider": "CFL N402",
+      "description": "Base de HTML, CSS y construccion de paginas web responsive."
+    },
+    {
+      "status": "En progreso",
+      "title": "Git, GitHub e ingles tecnico",
+      "provider": "Ruta personal",
+      "description": "Objetivo de corto plazo: mejorar repositorios, documentacion, publicacion de proyectos y vocabulario tecnico."
+    }
+  ],
   "timeline": [
     {
       "period": "Actualidad",

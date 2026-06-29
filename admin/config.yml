@@ -101,6 +101,15 @@ collections:
                   - { label: "Icono", name: "icon", widget: "string", required: false }
                   - { label: "Color", name: "accent", widget: "string", required: false }
 
+          - label: "Cursos y aprendizaje"
+            name: "learning"
+            widget: "list"
+            fields:
+              - { label: "Estado", name: "status", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Institucion o plataforma", name: "provider", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "text" }
+
           - label: "Formacion y timeline"
             name: "timeline"
             widget: "list"

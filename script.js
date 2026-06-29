@@ -292,6 +292,25 @@ const renderSkills = () => {
   setActive(data.skills[0].id);
 };
 
+const renderLearning = () => {
+  const list = select("#learning-list");
+  if (!list || !Array.isArray(data.learning)) return;
+
+  data.learning.forEach((item) => {
+    const row = document.createElement("article");
+    row.className = "learning-item";
+    row.innerHTML = `
+      <span>${item.status}</span>
+      <div>
+        <h3>${item.title}</h3>
+        <strong>${item.provider}</strong>
+        <p>${item.description}</p>
+      </div>
+    `;
+    list.append(row);
+  });
+};
+
 const renderTimeline = () => {
   const timeline = select("#timeline");
   data.timeline.forEach((item) => {
@@ -403,6 +422,7 @@ const init = () => {
   renderOpportunityCards();
   renderProjects();
   renderSkills();
+  renderLearning();
   renderTimeline();
   renderProfiles();
   renderContact();
