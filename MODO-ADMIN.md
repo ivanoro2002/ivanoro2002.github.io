@@ -90,6 +90,7 @@ Campos editables:
 
 - Nombre y perfil.
 - Sobre mi.
+- Perfil de busqueda.
 - Contacto.
 - CV.
 - Proyectos.

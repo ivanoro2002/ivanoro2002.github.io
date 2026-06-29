@@ -4,9 +4,62 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin | Portafolio Ivan</title>
+    <style>
+      body {
+        margin: 0;
+        background: #0b1312;
+        color: #ffffff;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .admin-loading {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        padding: 24px;
+        pointer-events: none;
+      }
+
+      .admin-loading-card {
+        width: min(520px, 100%);
+        padding: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+      }
+
+      .admin-loading-card span {
+        color: #20c978;
+        font-size: 0.78rem;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .admin-loading-card h1 {
+        margin: 12px 0 8px;
+        font-size: clamp(2rem, 7vw, 3.5rem);
+        line-height: 1;
+      }
+
+      .admin-loading-card p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.72);
+      }
+    </style>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
+    <div class="admin-loading">
+      <div class="admin-loading-card">
+        <span>Panel privado</span>
+        <h1>Portafolio Ivan</h1>
+        <p>Cargando editor de contenido. Si no iniciaste sesion, entra con tu usuario de Netlify Identity.</p>
+      </div>
+    </div>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>

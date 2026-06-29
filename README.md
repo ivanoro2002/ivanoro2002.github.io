@@ -15,7 +15,7 @@ Esta carpeta contiene una version estatica y liviana del portafolio. Esta pensad
 
 La mayoria del contenido esta en `content/portfolio.json`.
 
-Para cambiar email, GitHub, LinkedIn, resumen, habilidades o proyectos, edita ese archivo.
+Para cambiar email, GitHub, LinkedIn, resumen, perfil de busqueda, habilidades o proyectos, edita ese archivo.
 
 Para agregar el CV:
 

@@ -48,6 +48,23 @@
       "value": "Espanol nativo, ingles A1"
     }
   ],
+  "opportunityCards": [
+    {
+      "label": "Roles objetivo",
+      "title": "Desarrollo trainee, soporte, QA inicial o mesa de ayuda",
+      "description": "Busco una primera experiencia real en IT donde pueda aprender procesos, trabajar con un equipo y sumar valor desde tareas iniciales."
+    },
+    {
+      "label": "Valor actual",
+      "title": "Responsabilidad, practica constante y base tecnica en crecimiento",
+      "description": "Estoy ordenando mi GitHub, armando proyectos propios y reforzando fundamentos de programacion, web, bases de datos y herramientas de trabajo."
+    },
+    {
+      "label": "Disponibilidad",
+      "title": "Abierto a oportunidades iniciales y practicas",
+      "description": "Disponible para conversar sobre posiciones junior iniciales, trainee, pasantias o roles donde pueda formarme dentro del mundo IT."
+    }
+  ],
   "projects": [
     {
       "name": "TP final de estructuras de datos",
@@ -108,12 +125,12 @@
       "links": [
         {
           "label": "Ver sitio",
-          "href": "#inicio",
+          "href": "https://ivan-portafolioit.netlify.app/",
           "icon": "external"
         },
         {
           "label": "Repositorio",
-          "href": "https://github.com/ivanoro2002",
+          "href": "https://github.com/ivanoro2002/ivanoro2002.github.io",
           "icon": "github"
         }
       ]

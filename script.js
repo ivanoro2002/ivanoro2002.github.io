@@ -199,6 +199,22 @@ const renderAbout = () => {
   });
 };
 
+const renderOpportunityCards = () => {
+  const grid = select("#opportunity-grid");
+  if (!grid || !Array.isArray(data.opportunityCards)) return;
+
+  data.opportunityCards.forEach((item) => {
+    const card = document.createElement("article");
+    card.className = "opportunity-card";
+    card.innerHTML = `
+      <span>${item.label}</span>
+      <h3>${item.title}</h3>
+      <p>${item.description}</p>
+    `;
+    grid.append(card);
+  });
+};
+
 const renderProjects = () => {
   const grid = select("#project-grid");
 
@@ -384,6 +400,7 @@ const init = () => {
   if (!data) return;
   renderHero();
   renderAbout();
+  renderOpportunityCards();
   renderProjects();
   renderSkills();
   renderTimeline();

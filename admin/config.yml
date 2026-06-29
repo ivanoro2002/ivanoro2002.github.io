@@ -57,6 +57,14 @@ collections:
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Valor", name: "value", widget: "string" }
 
+          - label: "Perfil de busqueda"
+            name: "opportunityCards"
+            widget: "list"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "text" }
+
           - label: "Proyectos"
             name: "projects"
             widget: "list"
