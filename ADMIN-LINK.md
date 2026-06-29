@@ -8,10 +8,22 @@ Guardar este archivo como referencia personal.
 http://127.0.0.1:8765/admin/
 ```
 
+Editor directo:
+
+```text
+http://127.0.0.1:8765/admin/cms.html
+```
+
 ## Publicado en Netlify
 
 ```text
 https://ivan-portafolioit.netlify.app/admin/
+```
+
+Editor directo:
+
+```text
+https://ivan-portafolioit.netlify.app/admin/cms.html
 ```
 
 ## GitHub Pages, si se activa despues

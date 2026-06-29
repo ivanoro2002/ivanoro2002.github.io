@@ -1,25 +1,220 @@
+:root {
+  --dark: #0b1312;
+  --dark-2: #13211f;
+  --paper: #ffffff;
+  --bg: #f5f7f2;
+  --ink: #111c1a;
+  --muted: #5e6b67;
+  --line: rgba(23, 33, 31, 0.14);
+  --green: #20c978;
+  --blue: #67b7ff;
+  --amber: #f0b84a;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   min-height: 100%;
 }
 
 body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+.admin-home {
+  background:
+    linear-gradient(90deg, rgba(11, 19, 18, 0.96), rgba(11, 19, 18, 0.74)),
+    url("../assets/portfolio-hero.png") center / cover fixed no-repeat;
+  color: #ffffff;
+}
+
+.admin-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.admin-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: end;
+  min-height: 44vh;
+  padding: 30px 0;
+}
+
+.admin-kicker,
+.admin-card span,
+.guide-grid span {
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-hero h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.94;
+}
+
+.admin-hero p {
+  max-width: 680px;
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 1.08rem;
+}
+
+.admin-status,
+.admin-card,
+.admin-guide {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.admin-status {
+  padding: 22px;
+}
+
+.status-dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 0 0 0 8px rgba(32, 201, 120, 0.14);
+}
+
+.admin-status strong {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.admin-status p {
+  margin: 8px 0 0;
+  font-size: 0.96rem;
+}
+
+.admin-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.admin-card {
+  min-height: 210px;
+  padding: 22px;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.admin-card:hover,
+.admin-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(32, 201, 120, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.admin-card.primary {
+  border-color: rgba(32, 201, 120, 0.5);
+  background: linear-gradient(180deg, rgba(32, 201, 120, 0.24), rgba(255, 255, 255, 0.08));
+}
+
+.admin-card strong {
+  display: block;
+  margin-top: 14px;
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.admin-card p {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.admin-guide {
+  margin-top: 16px;
+  padding: 24px;
+}
+
+.admin-guide h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.guide-grid article {
+  min-height: 170px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(11, 19, 18, 0.38);
+}
+
+.guide-grid strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.guide-grid p {
+  margin: 9px 0 0;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.92rem;
+}
+
+.cms-page {
   background:
     linear-gradient(180deg, #f5f7f2 0%, #e9eee4 100%);
-}
-
-body > div:not(.admin-loading) {
-  position: relative;
-  z-index: 1;
-}
-
-a[href="/"],
-a[href="https://ivan-portafolioit.netlify.app"] {
-  font-weight: 800;
 }
 
 input,
 textarea,
 select {
   border-radius: 8px !important;
+}
+
+@media (max-width: 900px) {
+  .admin-hero,
+  .admin-actions,
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-shell {
+    padding: 28px 0;
+  }
+
+  .admin-hero {
+    min-height: auto;
+    align-items: start;
+  }
+
+  .admin-card,
+  .guide-grid article {
+    min-height: auto;
+  }
 }

@@ -4,87 +4,73 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin | Portafolio Ivan</title>
-    <link rel="stylesheet" href="admin.css?v=20260629-1">
-    <style>
-      body {
-        margin: 0;
-        background: #f5f7f2;
-        color: #ffffff;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      .admin-loading {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        display: grid;
-        min-height: 100vh;
-        place-items: center;
-        padding: 24px;
-        pointer-events: none;
-        transition: opacity 220ms ease, visibility 220ms ease;
-        background:
-          linear-gradient(90deg, rgba(11, 19, 18, 0.97), rgba(11, 19, 18, 0.82)),
-          url("../assets/portfolio-hero.png") center / cover no-repeat;
-      }
-
-      .admin-loading.is-hidden {
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      .admin-loading-card {
-        width: min(520px, 100%);
-        padding: 28px;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        border-radius: 8px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-      }
-
-      .admin-loading-card span {
-        color: #20c978;
-        font-size: 0.78rem;
-        font-weight: 850;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .admin-loading-card h1 {
-        margin: 12px 0 8px;
-        font-size: clamp(2rem, 7vw, 3.5rem);
-        line-height: 1;
-      }
-
-      .admin-loading-card p {
-        margin: 0;
-        color: rgba(255, 255, 255, 0.72);
-      }
-    </style>
+    <link rel="stylesheet" href="admin.css?v=20260629-2">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body>
-    <div class="admin-loading" aria-live="polite">
-      <div class="admin-loading-card">
-        <span>Panel privado</span>
-        <h1>Portafolio Ivan</h1>
-        <p>Cargando editor de contenido. Si no iniciaste sesion, entra con tu usuario de Netlify Identity.</p>
-      </div>
-    </div>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    <script>
-      const adminLoader = document.querySelector(".admin-loading");
+  <body class="admin-home">
+    <main class="admin-shell">
+      <section class="admin-hero" aria-label="Panel privado">
+        <div>
+          <p class="admin-kicker">Panel privado</p>
+          <h1>Gestion del portafolio</h1>
+          <p>
+            Desde aca entras al editor para actualizar proyectos, cursos, habilidades,
+            datos personales, CV y enlaces de contacto.
+          </p>
+        </div>
 
-      const hideAdminLoader = () => {
-        if (!adminLoader) return;
-        adminLoader.classList.add("is-hidden");
-        window.setTimeout(() => adminLoader.remove(), 260);
-      };
+        <div class="admin-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <strong>Acceso privado</strong>
+          <p>Solo tu usuario autorizado puede guardar cambios.</p>
+        </div>
+      </section>
 
-      window.addEventListener("load", () => {
-        window.setTimeout(hideAdminLoader, 1400);
-      });
+      <section class="admin-actions" aria-label="Acciones principales">
+        <a class="admin-card primary" href="cms.html">
+          <span>Editar contenido</span>
+          <strong>Abrir editor</strong>
+          <p>Modificar textos, proyectos, cursos, habilidades, perfil de busqueda y contacto.</p>
+        </a>
 
-      window.setTimeout(hideAdminLoader, 3200);
-    </script>
+        <a class="admin-card" href="../" target="_blank" rel="noreferrer">
+          <span>Vista publica</span>
+          <strong>Ver web</strong>
+          <p>Revisar como ve el portafolio cualquier persona que entra al link.</p>
+        </a>
+
+        <a class="admin-card" href="https://app.netlify.com/projects/ivan-portafolioit" target="_blank" rel="noreferrer">
+          <span>Publicacion</span>
+          <strong>Netlify</strong>
+          <p>Ver deploys, dominio, estado de publicacion e identidad del sitio.</p>
+        </a>
+      </section>
+
+      <section class="admin-guide" aria-label="Guia rapida">
+        <h2>Que podes editar</h2>
+        <div class="guide-grid">
+          <article>
+            <span>01</span>
+            <strong>Perfil y objetivo</strong>
+            <p>Nombre, rol, resumen, datos rapidos y perfil de busqueda.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Proyectos</strong>
+            <p>Nombre, descripcion, tecnologias, imagen, demo y repositorio.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Cursos y habilidades</strong>
+            <p>Agregar avances de aprendizaje, herramientas y proximos focos.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <strong>Contacto y CV</strong>
+            <p>Actualizar Gmail, WhatsApp, LinkedIn, GitHub y archivo PDF.</p>
+          </article>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
