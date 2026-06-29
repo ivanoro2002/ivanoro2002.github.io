@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ivan Nazareno Valicenti Orosco | Portafolio IT</title>
+    <meta
+      name="description"
+      content="Portafolio personal de Ivan Nazareno Valicenti Orosco, estudiante de programacion en busqueda de su primera oportunidad IT."
+    >
+    <meta name="theme-color" content="#101716">
+    <link rel="stylesheet" href="styles.css?v=20260629-2">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" id="inicio">
+      <nav class="nav" aria-label="Navegacion principal">
+        <a class="brand" href="#inicio">
+          <span class="brand-mark" aria-hidden="true">IV</span>
+          <span>Ivan Valicenti</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="#sobre-mi">Sobre mi</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#formacion">Formacion</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+
+      <section class="hero" aria-label="Presentacion principal">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Estudiante de programacion | Perfil inicial IT</p>
+            <h1>Ivan Nazareno Valicenti Orosco</h1>
+            <p class="hero-lead" id="hero-summary">
+              Estudiante de programacion en Buenos Aires, enfocado en construir proyectos reales,
+              aprender buenas practicas y conseguir mi primera experiencia en IT.
+            </p>
+
+            <div class="hero-actions" id="hero-actions" aria-label="Acciones principales"></div>
+
+            <dl class="quick-facts" id="quick-facts" aria-label="Datos principales"></dl>
+          </div>
+
+          <div class="hero-panel reveal" aria-label="Estado profesional">
+            <div class="status-card">
+              <p class="status-label">Objetivo actual</p>
+              <strong>Primera experiencia IT</strong>
+              <span>Busco incorporarme a un equipo en un rol inicial de desarrollo, soporte, QA o areas relacionadas con tecnologia.</span>
+            </div>
+            <div class="focus-list" id="focus-list"></div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main id="contenido">
+      <section class="section about" id="sobre-mi">
+        <div class="section-inner about-grid">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Sobre mi</p>
+            <h2>Estoy formando una base tecnica solida y buscando crecer dentro de IT.</h2>
+          </div>
+          <div class="about-content reveal">
+            <p id="about-main"></p>
+            <p id="about-secondary"></p>
+            <div class="profile-strip" id="profile-strip"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark-band" id="proyectos">
+        <div class="section-inner">
+          <div class="section-heading wide reveal">
+            <p class="section-kicker">Proyectos</p>
+            <h2>Proyectos para demostrar aprendizaje, criterio y constancia.</h2>
+            <p>
+              Cada proyecto puede tener una demo, repositorio, tecnologias usadas y una explicacion clara.
+              Ahora dejo una estructura profesional para ir reemplazando con tus trabajos reales.
+            </p>
+          </div>
+
+          <div class="project-grid" id="project-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="habilidades">
+        <div class="section-inner skills-layout">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Habilidades</p>
+            <h2>Tecnologias que ya estas usando y las proximas que conviene reforzar.</h2>
+          </div>
+
+          <div class="skill-board reveal">
+            <div class="skill-tabs" role="tablist" aria-label="Categorias de habilidades" id="skill-tabs"></div>
+            <div class="skill-panel" id="skill-panel"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="formacion">
+        <div class="section-inner timeline-layout">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Formacion</p>
+            <h2>Universidad, practica y una ruta de cursos enfocada.</h2>
+          </div>
+
+          <div class="timeline reveal" id="timeline"></div>
+        </div>
+      </section>
+
+      <section class="section profile-section">
+        <div class="section-inner profile-grid">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Perfiles</p>
+            <h2>El sitio tiene que conectar con GitHub, LinkedIn y tu CV.</h2>
+          </div>
+
+          <div class="profile-actions reveal" id="profile-actions"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacto">
+      <div class="section-inner footer-grid">
+        <div class="reveal">
+          <p class="section-kicker">Contacto</p>
+          <h2>Disponible para aprender, colaborar y aportar desde un rol inicial.</h2>
+        </div>
+
+        <div class="contact-card reveal">
+          <p class="contact-note">
+            Si sos reclutador, mentor o tenes una oportunidad trainee, estos son los canales principales.
+          </p>
+          <div class="contact-links" id="contact-links"></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          <span id="year"></span> Ivan Nazareno Valicenti Orosco. Portafolio personal.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function (user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function () {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    <script src="script.js?v=20260629-3"></script>
+  </body>
+</html>

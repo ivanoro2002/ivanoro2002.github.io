@@ -1,0 +1,122 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+local_backend: true
+
+collections:
+  - name: "portfolio"
+    label: "Portafolio"
+    files:
+      - name: "contenido"
+        label: "Contenido principal"
+        file: "content/portfolio.json"
+        format: "json"
+        fields:
+          - label: "Perfil"
+            name: "profile"
+            widget: "object"
+            fields:
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Rol", name: "role", widget: "string" }
+              - { label: "Ubicacion", name: "location", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Telefono", name: "phone", widget: "string", required: false }
+              - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
+              - { label: "GitHub", name: "github", widget: "string" }
+              - { label: "LinkedIn", name: "linkedin", widget: "string" }
+              - { label: "CV", name: "cvUrl", widget: "file", required: false }
+              - { label: "Resumen", name: "summary", widget: "text" }
+
+          - label: "Datos rapidos"
+            name: "quickFacts"
+            widget: "list"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Valor", name: "value", widget: "string" }
+
+          - label: "Focos"
+            name: "focus"
+            widget: "list"
+            field: { label: "Texto", name: "item", widget: "string" }
+
+          - label: "Sobre mi"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Texto principal", name: "main", widget: "text" }
+              - { label: "Texto secundario", name: "secondary", widget: "text" }
+
+          - label: "Resumen de perfil"
+            name: "profileStrip"
+            widget: "list"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Valor", name: "value", widget: "string" }
+
+          - label: "Proyectos"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Estado", name: "status", widget: "string" }
+              - { label: "Tipo", name: "type", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "text" }
+              - { label: "Imagen", name: "image", widget: "image", required: false }
+              - label: "Tecnologias"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tecnologia", name: "tag", widget: "string" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Texto", name: "label", widget: "string" }
+                  - { label: "URL", name: "href", widget: "string", required: false }
+                  - { label: "Icono", name: "icon", widget: "string", required: false }
+
+          - label: "Habilidades"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Titulo", name: "label", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Nombre", name: "name", widget: "string" }
+                  - { label: "Nota", name: "note", widget: "text" }
+                  - { label: "Icono", name: "icon", widget: "string", required: false }
+                  - { label: "Color", name: "accent", widget: "string", required: false }
+
+          - label: "Formacion y timeline"
+            name: "timeline"
+            widget: "list"
+            fields:
+              - { label: "Periodo", name: "period", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "text" }
+
+          - label: "Perfiles"
+            name: "profileLinks"
+            widget: "list"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "text" }
+              - { label: "CTA", name: "cta", widget: "string" }
+              - { label: "URL", name: "href", widget: "string", required: false }
+              - { label: "Icono", name: "icon", widget: "string", required: false }
+
+          - label: "Contacto"
+            name: "contactLinks"
+            widget: "list"
+            fields:
+              - { label: "Texto", name: "label", widget: "string" }
+              - { label: "Detalle", name: "detail", widget: "string", required: false }
+              - { label: "Icono", name: "icon", widget: "string", required: false }
+              - { label: "URL", name: "href", widget: "string", required: false }
+              - { label: "Accesibilidad", name: "ariaLabel", widget: "string", required: false }
