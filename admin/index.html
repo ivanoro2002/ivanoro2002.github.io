@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin | Portafolio Ivan</title>
+    <link rel="stylesheet" href="admin.css?v=20260629-1">
     <style>
       body {
         margin: 0;
-        background: #0b1312;
+        background: #f5f7f2;
         color: #ffffff;
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
@@ -15,12 +16,21 @@
       .admin-loading {
         position: fixed;
         inset: 0;
-        z-index: 0;
+        z-index: 9999;
         display: grid;
         min-height: 100vh;
         place-items: center;
         padding: 24px;
         pointer-events: none;
+        transition: opacity 220ms ease, visibility 220ms ease;
+        background:
+          linear-gradient(90deg, rgba(11, 19, 18, 0.97), rgba(11, 19, 18, 0.82)),
+          url("../assets/portfolio-hero.png") center / cover no-repeat;
+      }
+
+      .admin-loading.is-hidden {
+        opacity: 0;
+        visibility: hidden;
       }
 
       .admin-loading-card {
@@ -53,7 +63,7 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <div class="admin-loading">
+    <div class="admin-loading" aria-live="polite">
       <div class="admin-loading-card">
         <span>Panel privado</span>
         <h1>Portafolio Ivan</h1>
@@ -61,5 +71,20 @@
       </div>
     </div>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      const adminLoader = document.querySelector(".admin-loading");
+
+      const hideAdminLoader = () => {
+        if (!adminLoader) return;
+        adminLoader.classList.add("is-hidden");
+        window.setTimeout(() => adminLoader.remove(), 260);
+      };
+
+      window.addEventListener("load", () => {
+        window.setTimeout(hideAdminLoader, 1400);
+      });
+
+      window.setTimeout(hideAdminLoader, 3200);
+    </script>
   </body>
 </html>

@@ -6,19 +6,26 @@ media_folder: "assets/uploads"
 public_folder: "assets/uploads"
 
 local_backend: true
+site_url: "https://ivan-portafolioit.netlify.app"
+display_url: "https://ivan-portafolioit.netlify.app"
 
 collections:
   - name: "portfolio"
     label: "Portafolio"
+    description: "Edita los textos, proyectos, habilidades, cursos, links y datos visibles del portafolio."
+    editor:
+      preview: false
     files:
       - name: "contenido"
-        label: "Contenido principal"
+        label: "Editar contenido del portafolio"
         file: "content/portfolio.json"
         format: "json"
         fields:
           - label: "Perfil"
             name: "profile"
             widget: "object"
+            collapsed: false
+            hint: "Datos principales que aparecen en el inicio, enlaces y contacto."
             fields:
               - { label: "Nombre", name: "name", widget: "string" }
               - { label: "Rol", name: "role", widget: "string" }
@@ -34,6 +41,9 @@ collections:
           - label: "Datos rapidos"
             name: "quickFacts"
             widget: "list"
+            summary: "{{fields.label}}: {{fields.value}}"
+            minimize_collapsed: true
+            hint: "Tarjetas pequenas debajo de la presentacion principal."
             fields:
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Valor", name: "value", widget: "string" }
@@ -41,11 +51,16 @@ collections:
           - label: "Focos"
             name: "focus"
             widget: "list"
+            summary: "{{fields.item}}"
+            minimize_collapsed: true
+            hint: "Puntos breves del panel de objetivo actual."
             field: { label: "Texto", name: "item", widget: "string" }
 
           - label: "Sobre mi"
             name: "about"
             widget: "object"
+            collapsed: false
+            hint: "Texto principal para explicar quien sos, que estudias y que estas buscando."
             fields:
               - { label: "Texto principal", name: "main", widget: "text" }
               - { label: "Texto secundario", name: "secondary", widget: "text" }
@@ -53,6 +68,9 @@ collections:
           - label: "Resumen de perfil"
             name: "profileStrip"
             widget: "list"
+            summary: "{{fields.label}}: {{fields.value}}"
+            minimize_collapsed: true
+            hint: "Tres tarjetas cortas debajo de Sobre mi."
             fields:
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Valor", name: "value", widget: "string" }
@@ -60,6 +78,9 @@ collections:
           - label: "Perfil de busqueda"
             name: "opportunityCards"
             widget: "list"
+            summary: "{{fields.label}} - {{fields.title}}"
+            minimize_collapsed: true
+            hint: "Tarjetas para explicar roles objetivo, valor actual y disponibilidad."
             fields:
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Titulo", name: "title", widget: "string" }
@@ -68,6 +89,9 @@ collections:
           - label: "Proyectos"
             name: "projects"
             widget: "list"
+            summary: "{{fields.name}} - {{fields.status}}"
+            minimize_collapsed: true
+            hint: "Cada proyecto puede tener descripcion, tecnologias, imagen, demo y repositorio."
             fields:
               - { label: "Nombre", name: "name", widget: "string" }
               - { label: "Estado", name: "status", widget: "string" }
@@ -77,10 +101,14 @@ collections:
               - label: "Tecnologias"
                 name: "tags"
                 widget: "list"
+                summary: "{{fields.tag}}"
+                minimize_collapsed: true
                 field: { label: "Tecnologia", name: "tag", widget: "string" }
               - label: "Links"
                 name: "links"
                 widget: "list"
+                summary: "{{fields.label}}"
+                minimize_collapsed: true
                 fields:
                   - { label: "Texto", name: "label", widget: "string" }
                   - { label: "URL", name: "href", widget: "string", required: false }
@@ -89,12 +117,17 @@ collections:
           - label: "Habilidades"
             name: "skills"
             widget: "list"
+            summary: "{{fields.label}}"
+            minimize_collapsed: true
+            hint: "Categorias de habilidades. Los iconos disponibles son textos como python, java, html, css, github, react."
             fields:
               - { label: "ID", name: "id", widget: "string" }
               - { label: "Titulo", name: "label", widget: "string" }
               - label: "Items"
                 name: "items"
                 widget: "list"
+                summary: "{{fields.name}}"
+                minimize_collapsed: true
                 fields:
                   - { label: "Nombre", name: "name", widget: "string" }
                   - { label: "Nota", name: "note", widget: "text" }
@@ -104,6 +137,9 @@ collections:
           - label: "Cursos y aprendizaje"
             name: "learning"
             widget: "list"
+            summary: "{{fields.status}} - {{fields.title}}"
+            minimize_collapsed: true
+            hint: "Cursos terminados, en progreso o proximos. Ideal para Udemy, GitHub, ingles y practica."
             fields:
               - { label: "Estado", name: "status", widget: "string" }
               - { label: "Titulo", name: "title", widget: "string" }
@@ -113,6 +149,9 @@ collections:
           - label: "Formacion y timeline"
             name: "timeline"
             widget: "list"
+            summary: "{{fields.period}} - {{fields.title}}"
+            minimize_collapsed: true
+            hint: "Linea de tiempo: universidad, cursos, idiomas y objetivo profesional."
             fields:
               - { label: "Periodo", name: "period", widget: "string" }
               - { label: "Titulo", name: "title", widget: "string" }
@@ -121,6 +160,9 @@ collections:
           - label: "Perfiles"
             name: "profileLinks"
             widget: "list"
+            summary: "{{fields.label}}"
+            minimize_collapsed: true
+            hint: "Botones grandes hacia GitHub, LinkedIn y CV."
             fields:
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Descripcion", name: "description", widget: "text" }
@@ -131,6 +173,9 @@ collections:
           - label: "Contacto"
             name: "contactLinks"
             widget: "list"
+            summary: "{{fields.label}}"
+            minimize_collapsed: true
+            hint: "Botones de contacto del pie de pagina, como Gmail y WhatsApp."
             fields:
               - { label: "Texto", name: "label", widget: "string" }
               - { label: "Detalle", name: "detail", widget: "string", required: false }
