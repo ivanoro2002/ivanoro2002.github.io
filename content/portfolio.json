@@ -71,6 +71,9 @@
       "status": "Universitario",
       "type": "Estructuras de datos",
       "description": "Proyecto universitario orientado a aplicar estructuras de datos, resolucion de problemas y organizacion del codigo.",
+      "problem": "Aplicar conceptos de estructuras de datos en un trabajo practico universitario con codigo organizado.",
+      "learning": "Refuerzo de logica, modularizacion, uso de repositorio y explicacion tecnica del trabajo.",
+      "nextStep": "Agregar README completo con capturas, explicacion del problema y pasos para ejecutar el proyecto.",
       "tags": [
         "Programacion",
         "Estructuras de datos",
@@ -94,6 +97,9 @@
       "status": "En desarrollo",
       "type": "Escritorio",
       "description": "Aplicacion pensada para reforzar programacion orientada a objetos, estructuras, clases y una interfaz simple.",
+      "problem": "Practicar una aplicacion de escritorio con clases, objetos y separacion de responsabilidades.",
+      "learning": "Practica de POO, organizacion de clases, eventos e interfaz simple.",
+      "nextStep": "Definir una funcionalidad principal, completar la interfaz y publicar capturas del resultado.",
       "tags": [
         "Java",
         "POO",
@@ -117,6 +123,9 @@
       "status": "Activo",
       "type": "Frontend",
       "description": "Sitio personal responsive para presentar perfil, proyectos, formacion, contacto, CV, GitHub y LinkedIn en una sola experiencia.",
+      "problem": "Centralizar el perfil profesional, CV, proyectos y contacto en una web rapida y facil de compartir.",
+      "learning": "Publicacion con Netlify, estructura de contenido editable, diseno responsive y mejoras progresivas.",
+      "nextStep": "Sumar proyectos reales, actualizar cursos y mantener el contenido desde el panel privado.",
       "tags": [
         "HTML",
         "CSS",

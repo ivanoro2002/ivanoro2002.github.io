@@ -264,6 +264,21 @@ const renderProjects = () => {
     const image = project.image
       ? `<div class="project-image"><img src="${project.image}" alt="Vista previa de ${project.name}"></div>`
       : "";
+    const projectDetails = [
+      { label: "Objetivo", text: project.problem },
+      { label: "Aprendizaje", text: project.learning },
+      { label: "Proximo paso", text: project.nextStep },
+    ]
+      .filter((detail) => detail.text)
+      .map(
+        (detail) => `
+          <div class="project-detail">
+            <span>${detail.label}</span>
+            <p>${detail.text}</p>
+          </div>
+        `,
+      )
+      .join("");
     const links = project.links
       .map((link) => {
         const disabled = !link.href;
@@ -282,6 +297,7 @@ const renderProjects = () => {
       <h3>${project.name}</h3>
       ${image}
       <p>${project.description}</p>
+      ${projectDetails ? `<div class="project-details">${projectDetails}</div>` : ""}
       <ul class="tag-list" aria-label="Tecnologias usadas">${tags}</ul>
       <div class="project-links">${links}</div>
     `;

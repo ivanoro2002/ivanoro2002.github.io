@@ -674,6 +674,35 @@ textarea {
   color: rgba(255, 255, 255, 0.72);
 }
 
+.project-details {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.project-detail {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(32, 201, 120, 0.11), rgba(103, 183, 255, 0.06)),
+    rgba(255, 255, 255, 0.055);
+}
+
+.project-detail span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--amber);
+  font-size: 0.74rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.project-detail p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;

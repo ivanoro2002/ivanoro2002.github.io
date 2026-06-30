@@ -98,6 +98,9 @@ collections:
               - { label: "Estado", name: "status", widget: "string" }
               - { label: "Tipo", name: "type", widget: "string" }
               - { label: "Descripcion", name: "description", widget: "text" }
+              - { label: "Problema u objetivo", name: "problem", widget: "text", required: false }
+              - { label: "Aprendizaje", name: "learning", widget: "text", required: false }
+              - { label: "Proximo paso", name: "nextStep", widget: "text", required: false }
               - { label: "Imagen", name: "image", widget: "image", required: false }
               - label: "Tecnologias"
                 name: "tags"
