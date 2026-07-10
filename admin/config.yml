@@ -92,31 +92,54 @@ collections:
             widget: "list"
             summary: "{{fields.name}} - {{fields.status}}"
             minimize_collapsed: true
-            hint: "Cada proyecto puede tener descripcion, objetivo, aprendizaje, proximo paso, tecnologias, imagen, demo y repositorio."
+            hint: "Carga una ficha por proyecto. El codigo normalmente queda en GitHub; aca van la explicacion, tecnologias, imagen opcional, demo y repositorio."
             fields:
-              - { label: "Nombre", name: "name", widget: "string" }
-              - { label: "Estado", name: "status", widget: "string" }
-              - { label: "Tipo", name: "type", widget: "string" }
-              - { label: "Descripcion", name: "description", widget: "text" }
-              - { label: "Problema u objetivo", name: "problem", widget: "text", required: false }
-              - { label: "Aprendizaje", name: "learning", widget: "text", required: false }
-              - { label: "Proximo paso", name: "nextStep", widget: "text", required: false }
-              - { label: "Imagen", name: "image", widget: "image", required: false }
+              - { label: "Nombre", name: "name", widget: "string", hint: "Ejemplo: Gestor de tareas, Calculadora Java, Portafolio web." }
+              - label: "Estado"
+                name: "status"
+                widget: "select"
+                default: "En desarrollo"
+                options: ["En desarrollo", "Activo", "Terminado", "Universitario", "Practica", "En pausa"]
+                hint: "Sirve para que quien mira sepa si es practica, universitario o proyecto activo."
+              - label: "Tipo"
+                name: "type"
+                widget: "select"
+                default: "Practica"
+                options: ["Frontend", "Backend", "Full stack", "Escritorio", "Estructuras de datos", "Base de datos", "QA / Testing", "Practica"]
+                hint: "Tambien se usa para los filtros visibles de la web."
+              - { label: "Descripcion", name: "description", widget: "text", hint: "Resumen corto: que hace el proyecto y con que enfoque fue construido." }
+              - { label: "Problema u objetivo", name: "problem", widget: "text", required: false, hint: "Que problema resuelve o que practica querias demostrar." }
+              - { label: "Aprendizaje", name: "learning", widget: "text", required: false, hint: "Que aprendiste: POO, DOM, SQL, Git, diseno responsive, etc." }
+              - { label: "Proximo paso", name: "nextStep", widget: "text", required: false, hint: "Mejora pendiente: README, capturas, demo, validaciones, login, base de datos." }
+              - { label: "Imagen", name: "image", widget: "image", required: false, hint: "Opcional. Puede ser una captura del proyecto. Se guarda en assets/uploads." }
               - label: "Tecnologias"
                 name: "tags"
                 widget: "list"
                 summary: "{{fields.tag}}"
                 minimize_collapsed: true
+                hint: "Agrega una tecnologia por item: HTML, CSS, JavaScript, Java, Python, SQL, Git."
                 field: { label: "Tecnologia", name: "tag", widget: "string" }
               - label: "Enlaces"
                 name: "links"
                 widget: "list"
                 summary: "{{fields.label}}"
                 minimize_collapsed: true
+                hint: "Lo ideal es cargar al menos el repositorio de GitHub. Si no hay demo todavia, deja ese enlace vacio o no lo agregues."
                 fields:
-                  - { label: "Texto", name: "label", widget: "string" }
-                  - { label: "Enlace", name: "href", widget: "string", required: false }
-                  - { label: "Icono", name: "icon", widget: "string", required: false }
+                  - label: "Texto"
+                    name: "label"
+                    widget: "select"
+                    options: ["Repositorio", "Ver demo", "Ver sitio", "Demo pendiente", "Documentacion"]
+                    hint: "Texto que aparece en el boton."
+                  - { label: "Enlace", name: "href", widget: "string", required: false, hint: "Pega la URL de GitHub, Netlify, Vercel, GitHub Pages o documentacion." }
+                  - label: "Icono"
+                    name: "icon"
+                    widget: "select"
+                    default: "external"
+                    required: false
+                    options:
+                      - { label: "GitHub", value: "github" }
+                      - { label: "Enlace externo", value: "external" }
 
           - label: "Habilidades"
             name: "skills"

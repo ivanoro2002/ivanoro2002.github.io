@@ -12,6 +12,7 @@ Esta carpeta contiene una version estatica y liviana del portafolio. Esta public
 - `admin/index.html`: panel privado de entrada.
 - `admin/cms.html`: editor de contenido con Decap CMS.
 - `admin/config.yml`: campos editables desde el admin.
+- `GUIA-PROYECTOS.md`: guia simple para cargar proyectos en el portafolio.
 - `MODO-ADMIN.md`: explicacion del modo admin.
 
 ## Como editar datos
