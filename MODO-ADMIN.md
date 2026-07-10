@@ -26,7 +26,7 @@ Un modo admin real necesita:
 
 ## Opcion recomendada para este portafolio
 
-### Decap CMS + GitHub
+### Decap CMS + GitHub + Netlify
 
 Es la mejor opcion para una web estatica publicada gratis.
 
@@ -37,7 +37,7 @@ Como funcionaria:
 3. Ivan inicia sesion con GitHub.
 4. El panel permite editar proyectos, datos, habilidades, cursos y CV.
 5. Cada cambio se guarda como commit en el repositorio.
-6. GitHub Pages vuelve a publicar la web.
+6. Netlify vuelve a publicar la web.
 
 Ventajas:
 
@@ -74,7 +74,7 @@ Desventaja: mas complejo que Decap CMS para una primera version.
 
 ### Fase 1 - Portafolio estatico
 
-Publicar la web actual en GitHub Pages.
+Publicar la web actual en Netlify.
 
 Edicion:
 
@@ -84,7 +84,7 @@ Edicion:
 
 ### Fase 2 - Admin con Decap CMS
 
-Agregar `/admin` con login de GitHub.
+Usar `/admin` con login privado mediante Netlify Identity.
 
 Campos editables:
 
@@ -111,7 +111,7 @@ Si hace falta algo mas potente:
 
 ## Decision actual
 
-Para no complicar la primera publicacion, conviene lanzar primero la web estatica. Despues, cuando el repositorio ya este online, agregar el admin con Decap CMS.
+La web ya esta publicada en Netlify y el admin ya esta integrado. El mantenimiento recomendado es seguir editando contenido desde el admin o con cambios locales pequenos, y luego publicar con GitHub/Netlify.
 
 ## Base integrada
 
@@ -126,10 +126,10 @@ La web publica carga los datos desde `content/portfolio.json`. El panel admin ed
 La web publica no muestra ningun boton visible al admin. Ivan debe guardar el enlace directo:
 
 - Local: `http://127.0.0.1:8765/admin/`
-- Publicado: `https://ivanoro2002.github.io/admin/`
+- Publicado: `https://ivan-portafolioit.netlify.app/admin/`
 
 Antes de publicar hay que confirmar:
 
-- Nombre exacto del repositorio.
-- Rama principal (`main` o `master`).
-- Configuracion de autenticacion de Decap CMS con GitHub.
+- Que Netlify termine el deploy.
+- Que el login de Netlify Identity siga funcionando.
+- Que el cambio guardado aparezca en `content/portfolio.json`.

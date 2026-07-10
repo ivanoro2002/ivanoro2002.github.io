@@ -1,6 +1,6 @@
 # Portafolio personal de Ivan
 
-Esta carpeta contiene una version estatica y liviana del portafolio. Esta pensada para publicarse gratis en GitHub Pages, Netlify o Vercel.
+Esta carpeta contiene una version estatica y liviana del portafolio. Esta publicada gratis en Netlify y conectada a GitHub para usar el modo admin con Decap CMS.
 
 ## Archivos principales
 
@@ -9,7 +9,10 @@ Esta carpeta contiene una version estatica y liviana del portafolio. Esta pensad
 - `content/portfolio.json`: datos editables del portafolio.
 - `script.js`: renderizado de secciones, menu movil y animaciones.
 - `assets/portfolio-hero.png`: imagen principal.
-- `MODO-ADMIN.md`: plan para agregar un panel privado de edicion.
+- `admin/index.html`: panel privado de entrada.
+- `admin/cms.html`: editor de contenido con Decap CMS.
+- `admin/config.yml`: campos editables desde el admin.
+- `MODO-ADMIN.md`: explicacion del modo admin.
 
 ## Como editar datos
 
@@ -43,38 +46,25 @@ En `content/portfolio.json`, dentro de `projects`, copia un bloque de proyecto y
 - `tags`
 - `links`
 
-## Publicacion gratuita recomendada
+## Publicacion gratuita actual
 
-Primera opcion: GitHub Pages.
-
-Nombre ideal del repositorio:
+La publicacion actual esta en Netlify:
 
 ```text
-ivanoro2002.github.io
+https://ivan-portafolioit.netlify.app/
 ```
 
-Cuando el repositorio este publicado con Pages, la web deberia quedar en:
+El admin esta en:
 
 ```text
-https://ivanoro2002.github.io
+https://ivan-portafolioit.netlify.app/admin/
 ```
 
 ## Acceso publico y edicion
 
 La web publicada es de solo lectura para visitantes. Cualquier persona con el link puede verla y tocar enlaces de contacto, pero no puede editar el contenido ni subir proyectos.
 
-La edicion queda limitada a quien tenga acceso de escritura al repositorio de GitHub o a los archivos locales. Para una primera version, esto es suficiente y seguro.
-
-Si mas adelante se quiere un panel admin dentro de la web, hay que agregar autenticacion y un servicio externo gratuito, por ejemplo Decap CMS, Firebase o Supabase.
-
-Una version futura del panel podria incluir:
-
-- Login privado.
-- Dashboard para agregar proyectos.
-- Editor de datos personales.
-- Carga de CV en PDF.
-- Panel para editar tecnologias, cursos y enlaces.
-- Guardado en un servicio gratuito con autenticacion.
+La edicion se hace desde `/admin/` con Netlify Identity y Git Gateway. Solo una cuenta autorizada puede guardar cambios reales en el repositorio.
 
 ## Pendientes para cerrar la primera version
 

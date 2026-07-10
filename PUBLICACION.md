@@ -1,8 +1,8 @@
 # Publicacion gratuita del portafolio
 
-## Opcion recomendada: GitHub Pages
+## Opcion actual recomendada: Netlify + GitHub
 
-Esta opcion es gratis y queda muy conectada con tu perfil de GitHub.
+Esta opcion es gratis y permite mantener la web estatica, rapida y con modo admin mediante Netlify Identity.
 
 Para una guia completa, ver tambien:
 
@@ -12,20 +12,11 @@ MANUAL-PUBLICACION-GRATIS.md
 
 ## Pasos generales
 
-1. Crear un repositorio en GitHub llamado `ivanoro2002.github.io`.
-2. Subir los archivos de esta carpeta al repositorio.
-3. Entrar en GitHub al repositorio.
-4. Ir a `Settings`.
-5. Ir a `Pages`.
-6. En `Build and deployment`, elegir la rama principal.
-7. Guardar.
-8. Esperar unos minutos.
-
-La URL esperada en GitHub Pages seria:
-
-```text
-https://ivanoro2002.github.io
-```
+1. Editar los archivos o usar el admin.
+2. Guardar los cambios.
+3. Hacer commit y `Push origin` si el cambio se hizo localmente.
+4. Netlify despliega automaticamente el sitio desde GitHub.
+5. Esperar unos minutos y revisar la URL publicada.
 
 La URL publicada en Netlify es:
 
@@ -33,7 +24,13 @@ La URL publicada en Netlify es:
 https://ivan-portafolioit.netlify.app/
 ```
 
-Se puede cambiar el nombre desde Netlify para que quede mas profesional.
+El admin publicado esta en:
+
+```text
+https://ivan-portafolioit.netlify.app/admin/
+```
+
+GitHub Pages queda como alternativa posible, pero para este proyecto conviene Netlify porque ya esta preparado el admin.
 
 ## Seguridad
 
@@ -43,7 +40,7 @@ Solo puede modificar la web quien tenga permisos de escritura en el repositorio 
 
 ## Contacto desde la web
 
-- El email usa un enlace `mailto:` y abre el correo del visitante para escribirte.
+- El email abre Gmail con el destinatario cargado.
 - GitHub y LinkedIn abren tus perfiles.
 - WhatsApp esta preparado con el numero del CV. Antes de publicar, conviene confirmar que queres dejarlo publico.
 
@@ -56,8 +53,6 @@ La web ya tiene una base de panel admin en:
 ```
 
 El link no aparece dentro de la web publica. Ivan debe guardarlo aparte.
-
-Para que ese panel pueda guardar cambios reales, primero hay que publicar el sitio y despues configurar la autenticacion con GitHub.
 
 La seguridad real no depende de esconder el link, sino de que solo una cuenta con permisos del repositorio pueda iniciar sesion y guardar cambios.
 

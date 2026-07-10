@@ -5,11 +5,9 @@ Este manual tiene dos caminos:
 - Camino A: publicar gratis con GitHub Pages.
 - Camino B: publicar gratis con GitHub + Netlify para usar mejor el modo admin.
 
-## Recomendacion
+## Recomendacion actual
 
-Si solo queres publicar la web: usa GitHub Pages.
-
-Si queres publicar la web y ademas usar el panel `/admin/` para editar desde la web: usa GitHub como repositorio y Netlify gratis como publicador. Decap CMS necesita autenticacion real para guardar cambios; no alcanza con subir archivos a cualquier hosting estatico.
+Para este portafolio conviene mantener Netlify gratis conectado a GitHub, porque ya permite usar el panel `/admin/` con autenticacion real. GitHub Pages queda como alternativa si algun dia se quiere una web sin admin.
 
 ## Antes de empezar
 
@@ -161,7 +159,7 @@ Para que `/admin/` permita editar:
 4. Probar entrar a:
 
 ```text
-https://TU-SITIO.netlify.app/admin/
+https://ivan-portafolioit.netlify.app/admin/
 ```
 
 5. Iniciar sesion.
@@ -208,16 +206,16 @@ Admin local:
 http://127.0.0.1:8765/admin/
 ```
 
-Web publicada en GitHub Pages:
+Web publicada en Netlify:
 
 ```text
-https://ivanoro2002.github.io
+https://ivan-portafolioit.netlify.app/
 ```
 
 Admin publicado:
 
 ```text
-https://ivanoro2002.github.io/admin/
+https://ivan-portafolioit.netlify.app/admin/
 ```
 
 ## Fuentes oficiales

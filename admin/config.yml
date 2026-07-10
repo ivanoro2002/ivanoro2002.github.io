@@ -92,7 +92,7 @@ collections:
             widget: "list"
             summary: "{{fields.name}} - {{fields.status}}"
             minimize_collapsed: true
-            hint: "Cada proyecto puede tener descripcion, tecnologias, imagen, demo y repositorio."
+            hint: "Cada proyecto puede tener descripcion, objetivo, aprendizaje, proximo paso, tecnologias, imagen, demo y repositorio."
             fields:
               - { label: "Nombre", name: "name", widget: "string" }
               - { label: "Estado", name: "status", widget: "string" }

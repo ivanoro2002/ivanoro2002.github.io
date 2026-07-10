@@ -143,7 +143,7 @@ const createLink = ({ label, href, kind = "ghost", disabled = false, icon = "ext
     link.href = href;
     if (href.startsWith("http")) {
       link.target = "_blank";
-      link.rel = "noreferrer";
+      link.rel = "noopener noreferrer";
     }
   }
 
@@ -171,14 +171,14 @@ const renderHero = () => {
   );
 
   const quickFacts = select("#quick-facts");
-  data.quickFacts.forEach((fact) => {
+  (data.quickFacts || []).forEach((fact) => {
     const item = document.createElement("div");
     item.innerHTML = `<dt>${fact.label}</dt><dd>${fact.value}</dd>`;
     quickFacts.append(item);
   });
 
   const focusList = select("#focus-list");
-  data.focus.forEach((item) => {
+  (data.focus || []).forEach((item) => {
     const row = document.createElement("div");
     row.className = "focus-item";
     row.innerHTML = `<i class="focus-dot" aria-hidden="true"></i><span>${item}</span>`;
@@ -186,9 +186,9 @@ const renderHero = () => {
   });
 
   const signal = select("#hero-signal");
-  const skillCount = data.skills.reduce((total, category) => total + category.items.length, 0);
+  const skillCount = (data.skills || []).reduce((total, category) => total + (category.items || []).length, 0);
   const signals = [
-    { value: data.projects.length, label: "proyectos" },
+    { value: (data.projects || []).length, label: "proyectos" },
     { value: skillCount, label: "habilidades" },
     { value: data.learning?.length || 0, label: "cursos" },
   ];
@@ -206,7 +206,7 @@ const renderAbout = () => {
   fillText("#about-secondary", data.about.secondary);
 
   const strip = select("#profile-strip");
-  data.profileStrip.forEach((item) => {
+  (data.profileStrip || []).forEach((item) => {
     const card = document.createElement("div");
     card.className = "strip-item";
     card.innerHTML = `<span>${item.label}</span><strong>${item.value}</strong>`;
@@ -234,7 +234,8 @@ const renderProjects = () => {
   const grid = select("#project-grid");
   const filters = select("#project-filters");
   const count = select("#project-count");
-  const projectTypes = ["Todos", ...new Set(data.projects.map((project) => project.type))];
+  const projects = Array.isArray(data.projects) ? data.projects : [];
+  const projectTypes = ["Todos", ...new Set(projects.map((project) => project.type).filter(Boolean))];
 
   const updateCount = (visibleCount) => {
     count.textContent = `${visibleCount} proyecto${visibleCount === 1 ? "" : "s"} visible${visibleCount === 1 ? "" : "s"}`;
@@ -255,12 +256,12 @@ const renderProjects = () => {
     updateCount(visibleCount);
   };
 
-  data.projects.forEach((project) => {
+  projects.forEach((project) => {
     const card = document.createElement("article");
     card.className = "project-card reveal";
     card.dataset.type = project.type;
 
-    const tags = project.tags.map((tag) => `<li>${tag}</li>`).join("");
+    const tags = (project.tags || []).map((tag) => `<li>${tag}</li>`).join("");
     const image = project.image
       ? `<div class="project-image"><img src="${project.image}" alt="Vista previa de ${project.name}"></div>`
       : "";
@@ -279,12 +280,12 @@ const renderProjects = () => {
         `,
       )
       .join("");
-    const links = project.links
+    const links = (project.links || [])
       .map((link) => {
         const disabled = !link.href;
         const attrs = disabled
           ? 'href="#" aria-disabled="true" class="disabled"'
-          : `href="${link.href}"${link.href.startsWith("http") ? ' target="_blank" rel="noreferrer"' : ""}`;
+          : `href="${link.href}"${link.href.startsWith("http") ? ' target="_blank" rel="noopener noreferrer"' : ""}`;
         return `<a ${attrs}><span class="project-link-icon">${icons[link.icon || "external"] || ""}</span><span>${link.label}</span></a>`;
       })
       .join("");
@@ -316,7 +317,7 @@ const renderProjects = () => {
     filters.append(button);
   });
 
-  updateCount(data.projects.length);
+  updateCount(projects.length);
 };
 
 const renderSkills = () => {
@@ -344,7 +345,7 @@ const renderSkills = () => {
       .join("");
   };
 
-  data.skills.forEach((category, index) => {
+  (data.skills || []).forEach((category, index) => {
     const tab = document.createElement("button");
     tab.className = "skill-tab";
     tab.type = "button";
@@ -356,7 +357,7 @@ const renderSkills = () => {
     tabs.append(tab);
   });
 
-  setActive(data.skills[0].id);
+  if (data.skills?.[0]) setActive(data.skills[0].id);
 };
 
 const renderLearning = () => {
@@ -380,7 +381,7 @@ const renderLearning = () => {
 
 const renderTimeline = () => {
   const timeline = select("#timeline");
-  data.timeline.forEach((item) => {
+  (data.timeline || []).forEach((item) => {
     const row = document.createElement("article");
     row.className = "timeline-item";
     row.innerHTML = `<span>${item.period}</span><h3>${item.title}</h3><p>${item.description}</p>`;
@@ -390,7 +391,7 @@ const renderTimeline = () => {
 
 const renderProfiles = () => {
   const actions = select("#profile-actions");
-  data.profileLinks.forEach((item) => {
+  (data.profileLinks || []).forEach((item) => {
     const link = document.createElement("a");
     link.className = "profile-action";
     link.href = item.href || "#";
@@ -400,7 +401,7 @@ const renderProfiles = () => {
       link.classList.add("disabled");
     } else if (item.href.startsWith("http")) {
       link.target = "_blank";
-      link.rel = "noreferrer";
+      link.rel = "noopener noreferrer";
     }
 
     link.innerHTML = `
@@ -417,7 +418,7 @@ const renderProfiles = () => {
 
 const renderContact = () => {
   const links = select("#contact-links");
-  data.contactLinks.forEach((item) => {
+  (data.contactLinks || []).forEach((item) => {
     const link = document.createElement("a");
     link.className = `contact-button ${item.icon || ""}`;
     link.href = item.href || "#";
@@ -434,7 +435,7 @@ const renderContact = () => {
       link.setAttribute("aria-disabled", "true");
     } else if (item.href.startsWith("http")) {
       link.target = "_blank";
-      link.rel = "noreferrer";
+      link.rel = "noopener noreferrer";
     }
     links.append(link);
   });
