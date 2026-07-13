@@ -1,151 +1,24 @@
 {
-  "profile": {
-    "name": "Ivan Nazareno Valicenti Orosco",
-    "role": "Estudiante de Programacion | Perfil inicial IT",
-    "location": "Buenos Aires, Argentina",
-    "email": "valicentiivan@gmail.com",
-    "phone": "11 3912-8164",
-    "whatsapp": "https://wa.me/541139128164?text=Hola%20Ivan,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte",
-    "github": "https://github.com/ivanoro2002",
-    "linkedin": "https://www.linkedin.com/in/ivannazaorosco/",
-    "cvUrl": "assets/cv-ivan-valicenti.pdf",
-    "summary": "Estudiante de programacion en etapa intermedia de la carrera, enfocado en construir proyectos reales, aprender buenas practicas y conseguir mi primera experiencia en IT."
-  },
-  "appearance": {
-    "theme": "green"
-  },
-  "quickFacts": [
+  "timeline": [
     {
-      "label": "Ubicacion",
-      "value": "Buenos Aires, Argentina"
+      "period": "Actualidad",
+      "title": "Tecnicatura Universitaria en Programacion",
+      "description": "Universidad Nacional Guillermo Brown (UNAB). En curso desde marzo de 2025, con materias de segundo ano."
     },
     {
-      "label": "Perfil",
-      "value": "Inicial IT"
+      "period": "Cursos",
+      "title": "Programacion y desarrollo web",
+      "description": "Cursos realizados en CFL N402: Curso de Programacion y Curso de Desarrollo Web."
     },
     {
-      "label": "Carrera",
-      "value": "UNAB, en curso"
-    }
-  ],
-  "focus": [
-    "Desarrollo web, backend inicial, logica de programacion y proyectos propios.",
-    "Busqueda de primera experiencia en empresas de tecnologia.",
-    "Aprendizaje continuo con universidad, cursos y practica."
-  ],
-  "about": {
-    "main": "Soy estudiante de la Tecnicatura Universitaria en Programacion en la Universidad Nacional Guillermo Brown. Estoy construyendo mi camino profesional con proyectos, cursos y practica constante.",
-    "secondary": "Busco una primera experiencia en IT donde pueda aprender de un equipo, aportar con responsabilidad y crecer paso a paso. Me interesan roles iniciales en desarrollo web, backend, soporte, QA, mesa de ayuda o areas relacionadas con tecnologia."
-  },
-  "profileStrip": [
-    {
-      "label": "Formacion",
-      "value": "Tecnicatura Universitaria en Programacion"
+      "period": "Idiomas",
+      "title": "Espanol nativo e ingles A1",
+      "description": "Espanol nativo e ingles basico. El objetivo es seguir reforzando ingles tecnico para el mundo IT."
     },
     {
-      "label": "Objetivo",
-      "value": "Primer trabajo IT"
-    },
-    {
-      "label": "Idiomas",
-      "value": "Espanol nativo, ingles A1"
-    }
-  ],
-  "opportunityCards": [
-    {
-      "label": "Roles objetivo",
-      "title": "Desarrollo trainee, soporte, QA inicial o mesa de ayuda",
-      "description": "Busco una primera experiencia real en IT donde pueda aprender procesos, trabajar con un equipo y sumar valor desde tareas iniciales."
-    },
-    {
-      "label": "Valor actual",
-      "title": "Responsabilidad, practica constante y base tecnica en crecimiento",
-      "description": "Estoy ordenando mi GitHub, armando proyectos propios y reforzando fundamentos de programacion, web, bases de datos y herramientas de trabajo."
-    },
-    {
-      "label": "Disponibilidad",
-      "title": "Abierto a oportunidades iniciales y practicas",
-      "description": "Disponible para conversar sobre posiciones junior iniciales, trainee, pasantias o roles donde pueda formarme dentro del mundo IT."
-    }
-  ],
-  "projects": [
-    {
-      "name": "TP final de estructuras de datos",
-      "status": "Universitario",
-      "type": "Estructuras de datos",
-      "description": "Proyecto universitario orientado a aplicar estructuras de datos, resolucion de problemas y organizacion del codigo.",
-      "problem": "Aplicar conceptos de estructuras de datos en un trabajo practico universitario con codigo organizado.",
-      "learning": "Refuerzo de logica, modularizacion, uso de repositorio y explicacion tecnica del trabajo.",
-      "nextStep": "Agregar README completo con capturas, explicacion del problema y pasos para ejecutar el proyecto.",
-      "tags": [
-        "Programacion",
-        "Estructuras de datos",
-        "GitHub"
-      ],
-      "links": [
-        {
-          "label": "Demo pendiente",
-          "href": "",
-          "icon": "external"
-        },
-        {
-          "label": "Repositorio",
-          "href": "https://github.com/ivanoro2002/TP-final-estructuras-de-datos",
-          "icon": "github"
-        }
-      ]
-    },
-    {
-      "name": "Aplicacion Java",
-      "status": "En desarrollo",
-      "type": "Escritorio",
-      "description": "Aplicacion pensada para reforzar programacion orientada a objetos, estructuras, clases y una interfaz simple.",
-      "problem": "Practicar una aplicacion de escritorio con clases, objetos y separacion de responsabilidades.",
-      "learning": "Practica de POO, organizacion de clases, eventos e interfaz simple.",
-      "nextStep": "Definir una funcionalidad principal, completar la interfaz y publicar capturas del resultado.",
-      "tags": [
-        "Java",
-        "POO",
-        "Interfaz"
-      ],
-      "links": [
-        {
-          "label": "Demo pendiente",
-          "href": "",
-          "icon": "external"
-        },
-        {
-          "label": "Repositorio",
-          "href": "https://github.com/ivanoro2002",
-          "icon": "github"
-        }
-      ]
-    },
-    {
-      "name": "Portafolio web",
-      "status": "Activo",
-      "type": "Frontend",
-      "description": "Sitio personal responsive para presentar perfil, proyectos, formacion, contacto, CV, GitHub y LinkedIn en una sola experiencia.",
-      "problem": "Centralizar el perfil profesional, CV, proyectos y contacto en una web rapida y facil de compartir.",
-      "learning": "Publicacion con Netlify, estructura de contenido editable, diseno responsive y mejoras progresivas.",
-      "nextStep": "Sumar proyectos reales, actualizar cursos y mantener el contenido desde el panel privado.",
-      "tags": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
-      "links": [
-        {
-          "label": "Ver sitio",
-          "href": "https://ivan-portafolioit.netlify.app/",
-          "icon": "external"
-        },
-        {
-          "label": "Repositorio",
-          "href": "https://github.com/ivanoro2002/ivanoro2002.github.io",
-          "icon": "github"
-        }
-      ]
+      "period": "Objetivo profesional",
+      "title": "Primera oportunidad en IT",
+      "description": "Preparar perfil, CV, GitHub y proyectos para aplicar a puestos trainee, soporte, QA inicial o desarrollo junior."
     }
   ],
   "skills": [
@@ -294,46 +167,54 @@
       ]
     }
   ],
-  "learning": [
+  "appearance": {
+    "theme": "blue"
+  },
+  "profile": {
+    "github": "https://github.com/ivanoro2002",
+    "summary": "Estudiante de programacion en etapa intermedia de la carrera, enfocado en construir proyectos reales, aprender buenas practicas y conseguir mi primera experiencia en IT.",
+    "name": "Ivan Nazareno Valicenti Orosco",
+    "phone": "11 3912-8164",
+    "whatsapp": "https://wa.me/541139128164?text=Hola%20Ivan,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte",
+    "location": "Buenos Aires, Argentina",
+    "role": "Estudiante de Programacion | Perfil inicial IT",
+    "email": "valicentiivan@gmail.com",
+    "cvUrl": "assets/cv-ivan-valicenti.pdf",
+    "linkedin": "https://www.linkedin.com/in/ivannazaorosco/"
+  },
+  "about": {
+    "main": "Soy estudiante de la Tecnicatura Universitaria en Programacion en la Universidad Nacional Guillermo Brown. Estoy construyendo mi camino profesional con proyectos, cursos y practica constante.",
+    "secondary": "Busco una primera experiencia en IT donde pueda aprender de un equipo, aportar con responsabilidad y crecer paso a paso. Me interesan roles iniciales en desarrollo web, backend, soporte, QA, mesa de ayuda o areas relacionadas con tecnologia."
+  },
+  "profileStrip": [
     {
-      "status": "Realizado",
-      "title": "Curso de Programacion",
-      "provider": "CFL N402",
-      "description": "Formacion inicial para reforzar fundamentos de programacion, logica y practica."
+      "label": "Formacion",
+      "value": "Tecnicatura Universitaria en Programacion"
     },
     {
-      "status": "Realizado",
-      "title": "Curso de Desarrollo Web",
-      "provider": "CFL N402",
-      "description": "Base de HTML, CSS y construccion de paginas web responsive."
+      "label": "Objetivo",
+      "value": "Primer trabajo IT"
     },
     {
-      "status": "En progreso",
-      "title": "Git, GitHub e ingles tecnico",
-      "provider": "Ruta personal",
-      "description": "Objetivo de corto plazo: mejorar repositorios, documentacion, publicacion de proyectos y vocabulario tecnico."
+      "label": "Idiomas",
+      "value": "Espanol nativo, ingles A1"
     }
   ],
-  "timeline": [
+  "opportunityCards": [
     {
-      "period": "Actualidad",
-      "title": "Tecnicatura Universitaria en Programacion",
-      "description": "Universidad Nacional Guillermo Brown (UNAB). En curso desde marzo de 2025, con materias de segundo ano."
+      "label": "Roles objetivo",
+      "title": "Desarrollo trainee, soporte, QA inicial o mesa de ayuda",
+      "description": "Busco una primera experiencia real en IT donde pueda aprender procesos, trabajar con un equipo y sumar valor desde tareas iniciales."
     },
     {
-      "period": "Cursos",
-      "title": "Programacion y desarrollo web",
-      "description": "Cursos realizados en CFL N402: Curso de Programacion y Curso de Desarrollo Web."
+      "label": "Valor actual",
+      "title": "Responsabilidad, practica constante y base tecnica en crecimiento",
+      "description": "Estoy ordenando mi GitHub, armando proyectos propios y reforzando fundamentos de programacion, web, bases de datos y herramientas de trabajo."
     },
     {
-      "period": "Idiomas",
-      "title": "Espanol nativo e ingles A1",
-      "description": "Espanol nativo e ingles basico. El objetivo es seguir reforzando ingles tecnico para el mundo IT."
-    },
-    {
-      "period": "Objetivo profesional",
-      "title": "Primera oportunidad en IT",
-      "description": "Preparar perfil, CV, GitHub y proyectos para aplicar a puestos trainee, soporte, QA inicial o desarrollo junior."
+      "label": "Disponibilidad",
+      "title": "Abierto a oportunidades iniciales y practicas",
+      "description": "Disponible para conversar sobre posiciones junior iniciales, trainee, pasantias o roles donde pueda formarme dentro del mundo IT."
     }
   ],
   "profileLinks": [
@@ -359,6 +240,11 @@
       "icon": "download"
     }
   ],
+  "focus": [
+    "Desarrollo web, backend inicial, logica de programacion y proyectos propios.",
+    "Busqueda de primera experiencia en empresas de tecnologia.",
+    "Aprendizaje continuo con universidad, cursos y practica."
+  ],
   "contactLinks": [
     {
       "label": "Enviar email",
@@ -373,6 +259,120 @@
       "icon": "whatsapp",
       "href": "https://wa.me/541139128164?text=Hola%20Ivan,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte",
       "ariaLabel": "Escribir a Ivan por WhatsApp"
+    }
+  ],
+  "projects": [
+    {
+      "name": "TP final de estructuras de datos",
+      "status": "Universitario",
+      "tags": [
+        "Programacion",
+        "Estructuras de datos",
+        "GitHub"
+      ],
+      "links": [
+        {
+          "label": "Demo pendiente",
+          "href": "",
+          "icon": "external"
+        },
+        {
+          "label": "Repositorio",
+          "href": "https://github.com/ivanoro2002/TP-final-estructuras-de-datos",
+          "icon": "github"
+        }
+      ],
+      "type": "Estructuras de datos",
+      "description": "Proyecto universitario orientado a aplicar estructuras de datos, resolucion de problemas y organizacion del codigo.",
+      "learning": "Refuerzo de logica, modularizacion, uso de repositorio y explicacion tecnica del trabajo.",
+      "nextStep": "Agregar README completo con capturas, explicacion del problema y pasos para ejecutar el proyecto.",
+      "problem": "Aplicar conceptos de estructuras de datos en un trabajo practico universitario con codigo organizado."
+    },
+    {
+      "name": "Aplicacion Java",
+      "status": "En desarrollo",
+      "tags": [
+        "Java",
+        "POO",
+        "Interfaz"
+      ],
+      "links": [
+        {
+          "label": "Demo pendiente",
+          "href": "",
+          "icon": "external"
+        },
+        {
+          "label": "Repositorio",
+          "href": "https://github.com/ivanoro2002",
+          "icon": "github"
+        }
+      ],
+      "type": "Escritorio",
+      "description": "Aplicacion pensada para reforzar programacion orientada a objetos, estructuras, clases y una interfaz simple.",
+      "learning": "Practica de POO, organizacion de clases, eventos e interfaz simple.",
+      "nextStep": "Definir una funcionalidad principal, completar la interfaz y publicar capturas del resultado.",
+      "problem": "Practicar una aplicacion de escritorio con clases, objetos y separacion de responsabilidades."
+    },
+    {
+      "name": "Portafolio web",
+      "status": "Activo",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "links": [
+        {
+          "label": "Ver sitio",
+          "href": "https://ivan-portafolioit.netlify.app/",
+          "icon": "external"
+        },
+        {
+          "label": "Repositorio",
+          "href": "https://github.com/ivanoro2002/ivanoro2002.github.io",
+          "icon": "github"
+        }
+      ],
+      "type": "Frontend",
+      "description": "Sitio personal responsive para presentar perfil, proyectos, formacion, contacto, CV, GitHub y LinkedIn en una sola experiencia.",
+      "learning": "Publicacion con Netlify, estructura de contenido editable, diseno responsive y mejoras progresivas.",
+      "nextStep": "Sumar proyectos reales, actualizar cursos y mantener el contenido desde el panel privado.",
+      "problem": "Centralizar el perfil profesional, CV, proyectos y contacto en una web rapida y facil de compartir."
+    }
+  ],
+  "quickFacts": [
+    {
+      "label": "Ubicacion",
+      "value": "Buenos Aires, Argentina"
+    },
+    {
+      "label": "Perfil",
+      "value": "Inicial IT"
+    },
+    {
+      "label": "Carrera",
+      "value": "UNAB, en curso"
+    }
+  ],
+  "learning": [
+    {
+      "status": "Realizado",
+      "title": "Curso de Programacion",
+      "provider": "CFL N402",
+      "description": "Formacion inicial para reforzar fundamentos de programacion, logica y practica."
+    },
+    {
+      "status": "Realizado",
+      "title": "Curso de Desarrollo Web",
+      "provider": "CFL N402",
+      "description": "Base de HTML, CSS y construccion de paginas web responsive."
+    },
+    {
+      "status": "En progreso",
+      "title": "Git, GitHub e ingles tecnico",
+      "provider": "Ruta personal",
+      "description": "Objetivo de corto plazo: mejorar repositorios, documentacion, publicacion de proyectos y vocabulario tecnico."
     }
   ]
 }
