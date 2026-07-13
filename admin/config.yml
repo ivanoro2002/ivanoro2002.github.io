@@ -39,6 +39,26 @@ collections:
               - { label: "CV", name: "cvUrl", widget: "file", required: false }
               - { label: "Resumen", name: "summary", widget: "text" }
 
+          - label: "Apariencia"
+            name: "appearance"
+            widget: "object"
+            collapsed: false
+            hint: "Cambia el color general del sitio publico sin agregar peso ni funciones extra."
+            fields:
+              - label: "Tema de color"
+                name: "theme"
+                widget: "select"
+                default: "green"
+                options:
+                  - { label: "Verde menta + grafito", value: "green" }
+                  - { label: "Azul tech + verde", value: "blue" }
+                  - { label: "Violeta creativo + verde", value: "violet" }
+                  - { label: "Ambar calido + azul", value: "amber" }
+                  - { label: "Coral suave + celeste", value: "coral" }
+                  - { label: "Rojo rubi + celeste", value: "ruby" }
+                  - { label: "Indigo elegante + cian", value: "indigo" }
+                hint: "Elegis uno, guardas y el cambio se ve en la web publica despues de publicar."
+
           - label: "Datos rapidos"
             name: "quickFacts"
             widget: "list"

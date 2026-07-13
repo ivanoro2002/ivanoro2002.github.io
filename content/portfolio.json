@@ -11,6 +11,9 @@
     "cvUrl": "assets/cv-ivan-valicenti.pdf",
     "summary": "Estudiante de programacion en etapa intermedia de la carrera, enfocado en construir proyectos reales, aprender buenas practicas y conseguir mi primera experiencia en IT."
   },
+  "appearance": {
+    "theme": "green"
+  },
   "quickFacts": [
     {
       "label": "Ubicacion",

@@ -10,6 +10,7 @@ Tener una zona privada para que Ivan pueda editar datos del portafolio desde la 
 - Agregar cursos.
 - Agregar proyectos.
 - Cambiar descripciones.
+- Cambiar el tema visual de la web publica.
 - Actualizar CV.
 
 Los visitantes publicos solo pueden ver la web y tocar enlaces. No pueden editar nada.
@@ -93,6 +94,7 @@ Campos editables:
 - Perfil de busqueda.
 - Contacto.
 - CV.
+- Apariencia visual.
 - Proyectos.
 - Habilidades.
 - Herramientas.
@@ -122,6 +124,22 @@ Ya existe una base de admin en:
 - `content/portfolio.json`
 
 La web publica carga los datos desde `content/portfolio.json`. El panel admin editara ese archivo.
+
+## Cambiar color del sitio
+
+En el admin, entrar a `Editar contenido` y abrir la seccion `Apariencia`.
+
+La opcion `Tema de color` permite elegir una combinacion visual para la web publica:
+
+- Verde menta + grafito.
+- Azul tech + verde.
+- Violeta creativo + verde.
+- Ambar calido + azul.
+- Coral suave + celeste.
+- Rojo rubi + celeste.
+- Indigo elegante + cian.
+
+El cambio es liviano: solo se guarda el nombre del tema en `content/portfolio.json` y la web publica aplica esos colores al cargar.
 
 La web publica no muestra ningun boton visible al admin. Ivan debe guardar el enlace directo:
 

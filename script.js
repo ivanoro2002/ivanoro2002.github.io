@@ -2,6 +2,125 @@ let data = null;
 
 const select = (selector) => document.querySelector(selector);
 
+const themePresets = {
+  green: {
+    bg: "#eefaf3",
+    dark: "#0b1312",
+    dark2: "#13211f",
+    dark3: "#20312d",
+    primary: "#20c978",
+    primaryDark: "#12865d",
+    primarySoft: "#c8f7dc",
+    secondary: "#67b7ff",
+    warm: "#f0b84a",
+    alert: "#ff8c7a",
+  },
+  blue: {
+    bg: "#eef6ff",
+    dark: "#08111f",
+    dark2: "#101d33",
+    dark3: "#1d3357",
+    primary: "#3b82f6",
+    primaryDark: "#1d4ed8",
+    primarySoft: "#dbeafe",
+    secondary: "#20c978",
+    warm: "#f59e0b",
+    alert: "#fb7185",
+  },
+  violet: {
+    bg: "#f6f1ff",
+    dark: "#130b24",
+    dark2: "#20133a",
+    dark3: "#342059",
+    primary: "#8b5cf6",
+    primaryDark: "#6d28d9",
+    primarySoft: "#ede9fe",
+    secondary: "#22c55e",
+    warm: "#f59e0b",
+    alert: "#fb7185",
+  },
+  amber: {
+    bg: "#fff8e8",
+    dark: "#1a1206",
+    dark2: "#2b1d0a",
+    dark3: "#463111",
+    primary: "#f59e0b",
+    primaryDark: "#b45309",
+    primarySoft: "#fef3c7",
+    secondary: "#3b82f6",
+    warm: "#10b981",
+    alert: "#f97316",
+  },
+  coral: {
+    bg: "#fff3ef",
+    dark: "#1d0e0a",
+    dark2: "#311711",
+    dark3: "#52271d",
+    primary: "#f9735b",
+    primaryDark: "#c2412d",
+    primarySoft: "#ffe4dc",
+    secondary: "#38bdf8",
+    warm: "#f59e0b",
+    alert: "#fb7185",
+  },
+  ruby: {
+    bg: "#fff1f3",
+    dark: "#1d0b10",
+    dark2: "#33121c",
+    dark3: "#562033",
+    primary: "#e11d48",
+    primaryDark: "#9f1239",
+    primarySoft: "#ffe4e6",
+    secondary: "#38bdf8",
+    warm: "#f59e0b",
+    alert: "#fb7185",
+  },
+  indigo: {
+    bg: "#f2f5ff",
+    dark: "#0d1024",
+    dark2: "#171b3a",
+    dark3: "#262d5f",
+    primary: "#6366f1",
+    primaryDark: "#4338ca",
+    primarySoft: "#e0e7ff",
+    secondary: "#22d3ee",
+    warm: "#f59e0b",
+    alert: "#fb7185",
+  },
+};
+
+const hexToRgb = (hex) => {
+  const normalized = hex.replace("#", "");
+  return [
+    Number.parseInt(normalized.slice(0, 2), 16),
+    Number.parseInt(normalized.slice(2, 4), 16),
+    Number.parseInt(normalized.slice(4, 6), 16),
+  ].join(", ");
+};
+
+const applyAppearance = () => {
+  const themeName = data?.appearance?.theme || "green";
+  const theme = themePresets[themeName] || themePresets.green;
+  const root = document.documentElement;
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  root.style.setProperty("--bg", theme.bg);
+  root.style.setProperty("--dark", theme.dark);
+  root.style.setProperty("--dark-2", theme.dark2);
+  root.style.setProperty("--dark-3", theme.dark3);
+  root.style.setProperty("--green", theme.primary);
+  root.style.setProperty("--green-2", theme.primaryDark);
+  root.style.setProperty("--mint", theme.primarySoft);
+  root.style.setProperty("--blue", theme.secondary);
+  root.style.setProperty("--amber", theme.warm);
+  root.style.setProperty("--rose", theme.alert);
+  root.style.setProperty("--green-rgb", hexToRgb(theme.primary));
+  root.style.setProperty("--blue-rgb", hexToRgb(theme.secondary));
+  root.style.setProperty("--amber-rgb", hexToRgb(theme.warm));
+
+  if (themeColor) themeColor.setAttribute("content", theme.dark);
+};
+
 const icons = {
   briefcase: `
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -485,6 +604,7 @@ const setupReveal = () => {
 
 const init = () => {
   if (!data) return;
+  applyAppearance();
   renderHero();
   renderAbout();
   renderOpportunityCards();
