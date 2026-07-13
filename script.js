@@ -149,7 +149,7 @@ const icons = {
   `,
   mail: `
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M4.5 6.75h15a1.5 1.5 0 0 1 1.5 1.5v7.5a1.5 1.5 0 0 1-1.5 1.5h-15a1.5 1.5 0 0 1-1.5-1.5v-7.5a1.5 1.5 0 0 1 1.5-1.5Zm.72 1.5L12 12.88l6.78-4.63H5.22Zm14.28 1.34-6.66 4.54a1.5 1.5 0 0 1-1.68 0L4.5 9.59v6.16h15V9.59Z"/>
+      <path d="M5.75 5.5h12.5A2.75 2.75 0 0 1 21 8.25v7.5a2.75 2.75 0 0 1-2.75 2.75H5.75A2.75 2.75 0 0 1 3 15.75v-7.5A2.75 2.75 0 0 1 5.75 5.5Zm.1 1.55 5.26 4.7c.5.45 1.28.45 1.78 0l5.26-4.7H5.85Zm13.65 1.5-4.18 3.73 4.08 3.4c.06-.2.1-.42.1-.65V8.55Zm-15 0v6.48c0 .23.04.45.1.65l4.08-3.4L4.5 8.55Zm5.32 4.75-3.98 3.32h12.32l-3.98-3.32-.3.27a2.84 2.84 0 0 1-3.76 0l-.3-.27Z"/>
     </svg>
   `,
   whatsapp: `
@@ -512,7 +512,7 @@ const renderProfiles = () => {
   const actions = select("#profile-actions");
   (data.profileLinks || []).forEach((item) => {
     const link = document.createElement("a");
-    link.className = "profile-action";
+    link.className = `profile-action ${item.icon || ""}`;
     link.href = item.href || "#";
 
     if (!item.href) {
