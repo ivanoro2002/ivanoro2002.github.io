@@ -165,6 +165,42 @@ a {
   line-height: 1;
 }
 
+.admin-guide.checklist {
+  background:
+    linear-gradient(135deg, rgba(32, 201, 120, 0.16), rgba(103, 183, 255, 0.1)),
+    rgba(255, 255, 255, 0.08);
+}
+
+.admin-guide ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.admin-guide li {
+  position: relative;
+  padding: 14px 14px 14px 42px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(11, 19, 18, 0.34);
+  color: rgba(255, 255, 255, 0.76);
+  font-weight: 700;
+}
+
+.admin-guide li::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 0 0 0 6px rgba(32, 201, 120, 0.14);
+}
+
 .guide-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -272,6 +308,8 @@ a {
 .cms-page [class*="FieldHint"],
 .cms-page [class*="Hint"] {
   color: var(--green-2) !important;
+  font-size: 0.92rem !important;
+  line-height: 1.45 !important;
 }
 
 .cms-page button,

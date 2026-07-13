@@ -2,18 +2,18 @@
   "timeline": [
     {
       "period": "Actualidad",
-      "title": "Tecnicatura Universitaria en Programacion",
-      "description": "Universidad Nacional Guillermo Brown (UNAB). En curso desde marzo de 2025, con materias de segundo ano."
+      "title": "Tecnicatura Universitaria en Programación",
+      "description": "Universidad Nacional Guillermo Brown (UNAB). En curso desde marzo de 2025, con materias de segundo año."
     },
     {
       "period": "Cursos",
-      "title": "Programacion y desarrollo web",
-      "description": "Cursos realizados en CFL N402: Curso de Programacion y Curso de Desarrollo Web."
+      "title": "Programación y desarrollo web",
+      "description": "Cursos realizados en CFL Nro. 402: Curso de Programación y Curso de Desarrollo Web."
     },
     {
       "period": "Idiomas",
-      "title": "Espanol nativo e ingles A1",
-      "description": "Espanol nativo e ingles basico. El objetivo es seguir reforzando ingles tecnico para el mundo IT."
+      "title": "Español nativo e inglés A1",
+      "description": "Español nativo e inglés básico. El objetivo es seguir reforzando inglés técnico para el mundo IT."
     },
     {
       "period": "Objetivo profesional",
@@ -28,25 +28,25 @@
       "items": [
         {
           "name": "Python",
-          "note": "Fundamentos, ejercicios y proyectos de practica.",
+          "note": "Fundamentos, ejercicios y proyectos de práctica.",
           "icon": "python",
           "accent": "#3776ab"
         },
         {
           "name": "Java",
-          "note": "Programacion orientada a objetos y aplicaciones iniciales.",
+          "note": "Programación orientada a objetos y aplicaciones iniciales.",
           "icon": "java",
           "accent": "#f28c28"
         },
         {
           "name": "HTML",
-          "note": "Estructura semantica para sitios web.",
+          "note": "Estructura semántica para sitios web.",
           "icon": "html",
           "accent": "#e34f26"
         },
         {
           "name": "CSS",
-          "note": "Diseno responsive, layout y estilos visuales.",
+          "note": "Diseño responsive, layout y estilos visuales.",
           "icon": "css",
           "accent": "#1572b6"
         },
@@ -70,7 +70,7 @@
         },
         {
           "name": "GitHub",
-          "note": "Repositorios, README y publicacion con Pages.",
+          "note": "Repositorios, README y publicación con Pages.",
           "icon": "github",
           "accent": "#24292f"
         },
@@ -82,13 +82,13 @@
         },
         {
           "name": "Microsoft Office",
-          "note": "Herramientas de trabajo, documentacion y organizacion.",
+          "note": "Herramientas de trabajo, documentación y organización.",
           "icon": "office",
           "accent": "#d83b01"
         },
         {
-          "name": "Publicacion web",
-          "note": "Publicacion gratuita del portafolio estatico.",
+          "name": "Publicación web",
+          "note": "Publicación gratuita del portafolio estático.",
           "icon": "deploy",
           "accent": "#20c978"
         }
@@ -96,11 +96,11 @@
     },
     {
       "id": "next",
-      "label": "Proximo foco",
+      "label": "Próximo foco",
       "items": [
         {
           "name": "JavaScript",
-          "note": "DOM, eventos, logica de interfaz y consumo de datos.",
+          "note": "DOM, eventos, lógica de interfaz y consumo de datos.",
           "icon": "javascript",
           "accent": "#f7df1e"
         },
@@ -142,7 +142,7 @@
         },
         {
           "name": "Trabajo en equipo",
-          "note": "Buena comunicacion y predisposicion para colaborar.",
+          "note": "Buena comunicación y predisposición para colaborar.",
           "icon": "team",
           "accent": "#67b7ff"
         },
@@ -153,8 +153,8 @@
           "accent": "#f0b84a"
         },
         {
-          "name": "Resolucion de problemas",
-          "note": "Pensamiento logico y busqueda de soluciones practicas.",
+          "name": "Resolución de problemas",
+          "note": "Pensamiento lógico y búsqueda de soluciones prácticas.",
           "icon": "problem",
           "accent": "#ff8c7a"
         },
@@ -172,24 +172,24 @@
   },
   "profile": {
     "github": "https://github.com/ivanoro2002",
-    "summary": "Estudiante de programacion en etapa intermedia de la carrera, enfocado en construir proyectos reales, aprender buenas practicas y conseguir mi primera experiencia en IT.",
-    "name": "Ivan Nazareno Valicenti Orosco",
+    "summary": "Estudiante de programación en etapa intermedia de la carrera, enfocado en construir proyectos reales, aprender buenas prácticas y conseguir mi primera experiencia en IT.",
+    "name": "Iván Nazareno Valicenti Orosco",
     "phone": "11 3912-8164",
     "whatsapp": "https://wa.me/541139128164?text=Hola%20Ivan,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte",
     "location": "Buenos Aires, Argentina",
-    "role": "Estudiante de Programacion | Perfil inicial IT",
+    "role": "Estudiante de Programación | Perfil inicial IT",
     "email": "valicentiivan@gmail.com",
     "cvUrl": "assets/cv-ivan-valicenti.pdf",
     "linkedin": "https://www.linkedin.com/in/ivannazaorosco/"
   },
   "about": {
-    "main": "Soy estudiante de la Tecnicatura Universitaria en Programacion en la Universidad Nacional Guillermo Brown. Estoy construyendo mi camino profesional con proyectos, cursos y practica constante.",
-    "secondary": "Busco una primera experiencia en IT donde pueda aprender de un equipo, aportar con responsabilidad y crecer paso a paso. Me interesan roles iniciales en desarrollo web, backend, soporte, QA, mesa de ayuda o areas relacionadas con tecnologia."
+    "main": "Soy estudiante de la Tecnicatura Universitaria en Programación en la Universidad Nacional Guillermo Brown. Estoy construyendo mi camino profesional con proyectos, cursos y práctica constante.",
+    "secondary": "Busco una primera experiencia en IT donde pueda aprender de un equipo, aportar con responsabilidad y crecer paso a paso. Me interesan roles iniciales en desarrollo web, backend, soporte, QA, mesa de ayuda o áreas relacionadas con tecnología."
   },
   "profileStrip": [
     {
-      "label": "Formacion",
-      "value": "Tecnicatura Universitaria en Programacion"
+      "label": "Formación",
+      "value": "Tecnicatura Universitaria en Programación"
     },
     {
       "label": "Objetivo",
@@ -197,7 +197,7 @@
     },
     {
       "label": "Idiomas",
-      "value": "Espanol nativo, ingles A1"
+      "value": "Español nativo, inglés A1"
     }
   ],
   "opportunityCards": [
@@ -208,42 +208,42 @@
     },
     {
       "label": "Valor actual",
-      "title": "Responsabilidad, practica constante y base tecnica en crecimiento",
-      "description": "Estoy ordenando mi GitHub, armando proyectos propios y reforzando fundamentos de programacion, web, bases de datos y herramientas de trabajo."
+      "title": "Responsabilidad, práctica constante y base técnica en crecimiento",
+      "description": "Estoy ordenando mi GitHub, armando proyectos propios y reforzando fundamentos de programación, web, bases de datos y herramientas de trabajo."
     },
     {
       "label": "Disponibilidad",
-      "title": "Abierto a oportunidades iniciales y practicas",
-      "description": "Disponible para conversar sobre posiciones junior iniciales, trainee, pasantias o roles donde pueda formarme dentro del mundo IT."
+      "title": "Abierto a oportunidades iniciales y prácticas",
+      "description": "Disponible para conversar sobre posiciones junior iniciales, trainee, pasantías o roles donde pueda formarme dentro del mundo IT."
     }
   ],
   "profileLinks": [
     {
       "label": "GitHub",
-      "description": "Repositorios, proyectos y codigo fuente. Ideal para mostrar evidencia tecnica.",
+      "description": "Repositorios, proyectos y código fuente. Ideal para mostrar evidencia técnica.",
       "cta": "Abrir",
       "href": "https://github.com/ivanoro2002",
       "icon": "github"
     },
     {
       "label": "LinkedIn",
-      "description": "Perfil profesional, formacion y contacto laboral.",
+      "description": "Perfil profesional, formación y contacto laboral.",
       "cta": "Abrir",
       "href": "https://www.linkedin.com/in/ivannazaorosco/",
       "icon": "linkedin"
     },
     {
       "label": "CV",
-      "description": "CV actualizado en PDF con formacion, habilidades, cursos y contacto.",
+      "description": "CV actualizado en PDF con formación, habilidades, cursos y contacto.",
       "cta": "Descargar",
       "href": "assets/cv-ivan-valicenti.pdf",
       "icon": "download"
     }
   ],
   "focus": [
-    "Desarrollo web, backend inicial, logica de programacion y proyectos propios.",
-    "Busqueda de primera experiencia en empresas de tecnologia.",
-    "Aprendizaje continuo con universidad, cursos y practica."
+    "Desarrollo web, backend inicial, lógica de programación y proyectos propios.",
+    "Búsqueda de primera experiencia en empresas de tecnología.",
+    "Aprendizaje continuo con universidad, cursos y práctica."
   ],
   "contactLinks": [
     {
@@ -251,22 +251,22 @@
       "detail": "Responder por correo",
       "icon": "mail",
       "href": "https://mail.google.com/mail/?view=cm&fs=1&to=valicentiivan@gmail.com",
-      "ariaLabel": "Enviar email a Ivan"
+      "ariaLabel": "Enviar email a Iván"
     },
     {
       "label": "Escribir por WhatsApp",
       "detail": "Mensaje directo",
       "icon": "whatsapp",
       "href": "https://wa.me/541139128164?text=Hola%20Ivan,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte",
-      "ariaLabel": "Escribir a Ivan por WhatsApp"
+      "ariaLabel": "Escribir a Iván por WhatsApp"
     }
   ],
   "projects": [
     {
-      "name": "TP final de estructuras de datos",
+      "name": "Trabajo práctico final de estructuras de datos",
       "status": "Universitario",
       "tags": [
-        "Programacion",
+        "Programación",
         "Estructuras de datos",
         "GitHub"
       ],
@@ -283,13 +283,13 @@
         }
       ],
       "type": "Estructuras de datos",
-      "description": "Proyecto universitario orientado a aplicar estructuras de datos, resolucion de problemas y organizacion del codigo.",
-      "learning": "Refuerzo de logica, modularizacion, uso de repositorio y explicacion tecnica del trabajo.",
-      "nextStep": "Agregar README completo con capturas, explicacion del problema y pasos para ejecutar el proyecto.",
-      "problem": "Aplicar conceptos de estructuras de datos en un trabajo practico universitario con codigo organizado."
+      "description": "Proyecto universitario orientado a aplicar estructuras de datos, resolución de problemas y organización del código.",
+      "learning": "Refuerzo de lógica, modularización, uso de repositorio y explicación técnica del trabajo.",
+      "nextStep": "Agregar README completo con capturas, explicación del problema y pasos para ejecutar el proyecto.",
+      "problem": "Aplicar conceptos de estructuras de datos en un trabajo práctico universitario con código organizado."
     },
     {
-      "name": "Aplicacion Java",
+      "name": "Aplicación Java",
       "status": "En desarrollo",
       "tags": [
         "Java",
@@ -309,10 +309,10 @@
         }
       ],
       "type": "Escritorio",
-      "description": "Aplicacion pensada para reforzar programacion orientada a objetos, estructuras, clases y una interfaz simple.",
-      "learning": "Practica de POO, organizacion de clases, eventos e interfaz simple.",
+      "description": "Aplicación pensada para reforzar programación orientada a objetos, estructuras, clases y una interfaz simple.",
+      "learning": "Práctica de POO, organización de clases, eventos e interfaz simple.",
       "nextStep": "Definir una funcionalidad principal, completar la interfaz y publicar capturas del resultado.",
-      "problem": "Practicar una aplicacion de escritorio con clases, objetos y separacion de responsabilidades."
+      "problem": "Practicar una aplicación de escritorio con clases, objetos y separación de responsabilidades."
     },
     {
       "name": "Portafolio web",
@@ -335,15 +335,15 @@
         }
       ],
       "type": "Frontend",
-      "description": "Sitio personal responsive para presentar perfil, proyectos, formacion, contacto, CV, GitHub y LinkedIn en una sola experiencia.",
-      "learning": "Publicacion con Netlify, estructura de contenido editable, diseno responsive y mejoras progresivas.",
+      "description": "Sitio personal responsive para presentar perfil, proyectos, formación, contacto, CV, GitHub y LinkedIn en una sola experiencia.",
+      "learning": "Publicación con Netlify, estructura de contenido editable, diseño responsive y mejoras progresivas.",
       "nextStep": "Sumar proyectos reales, actualizar cursos y mantener el contenido desde el panel privado.",
-      "problem": "Centralizar el perfil profesional, CV, proyectos y contacto en una web rapida y facil de compartir."
+      "problem": "Centralizar el perfil profesional, CV, proyectos y contacto en una web rápida y fácil de compartir."
     }
   ],
   "quickFacts": [
     {
-      "label": "Ubicacion",
+      "label": "Ubicación",
       "value": "Buenos Aires, Argentina"
     },
     {
@@ -358,21 +358,21 @@
   "learning": [
     {
       "status": "Realizado",
-      "title": "Curso de Programacion",
-      "provider": "CFL N402",
-      "description": "Formacion inicial para reforzar fundamentos de programacion, logica y practica."
+      "title": "Curso de Programación",
+      "provider": "CFL Nro. 402",
+      "description": "Formación inicial para reforzar fundamentos de programación, lógica y práctica."
     },
     {
       "status": "Realizado",
       "title": "Curso de Desarrollo Web",
-      "provider": "CFL N402",
-      "description": "Base de HTML, CSS y construccion de paginas web responsive."
+      "provider": "CFL Nro. 402",
+      "description": "Base de HTML, CSS y construcción de páginas web responsive."
     },
     {
       "status": "En progreso",
-      "title": "Git, GitHub e ingles tecnico",
+      "title": "Git, GitHub e inglés técnico",
       "provider": "Ruta personal",
-      "description": "Objetivo de corto plazo: mejorar repositorios, documentacion, publicacion de proyectos y vocabulario tecnico."
+      "description": "Objetivo de corto plazo: mejorar repositorios, documentación, publicación de proyectos y vocabulario técnico."
     }
   ]
 }

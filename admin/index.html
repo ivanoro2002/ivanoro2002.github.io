@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin | Portafolio Ivan</title>
-    <link rel="stylesheet" href="admin.css?v=20260710-1">
+    <title>Admin | Portafolio Iván</title>
+    <link rel="stylesheet" href="admin.css?v=20260713-1">
+    <link rel="icon" href="../assets/portfolio-hero.png">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body class="admin-home">
@@ -12,9 +13,9 @@
       <section class="admin-hero" aria-label="Panel privado">
         <div>
           <p class="admin-kicker">Panel privado</p>
-          <h1>Gestion del portafolio</h1>
+          <h1>Gestión del portafolio</h1>
           <p>
-            Desde aca entras al editor para actualizar proyectos, cursos, habilidades,
+            Desde acá entrás al editor para actualizar proyectos, cursos, habilidades,
             apariencia, datos personales, CV y enlaces de contacto.
           </p>
         </div>
@@ -30,39 +31,39 @@
         <a class="admin-card primary" href="cms.html">
           <span>Editar contenido</span>
           <strong>Abrir editor</strong>
-          <p>Modificar textos, proyectos, cursos, habilidades, perfil de busqueda y contacto.</p>
+          <p>Modificar textos, proyectos, cursos, habilidades, apariencia, CV y contacto.</p>
         </a>
 
         <a class="admin-card" href="../" target="_blank" rel="noopener noreferrer">
-          <span>Vista publica</span>
+          <span>Vista pública</span>
           <strong>Ver web</strong>
-          <p>Revisar como ve el portafolio cualquier persona que entra al link.</p>
+          <p>Revisar cómo ve el portafolio cualquier persona que entra al link.</p>
         </a>
 
         <a class="admin-card" href="https://app.netlify.com/projects/ivan-portafolioit" target="_blank" rel="noopener noreferrer">
-          <span>Publicacion</span>
+          <span>Publicación</span>
           <strong>Netlify</strong>
-          <p>Ver deploys, dominio, estado de publicacion e identidad del sitio.</p>
+          <p>Ver deploys, dominio, estado de publicación e identidad del sitio.</p>
         </a>
       </section>
 
-      <section class="admin-guide" aria-label="Guia rapida">
-        <h2>Que podes editar</h2>
+      <section class="admin-guide" aria-label="Guía rápida">
+        <h2>Qué parte de la web edita cada sección</h2>
         <div class="guide-grid">
           <article>
             <span>01</span>
             <strong>Perfil y objetivo</strong>
-            <p>Nombre, rol, resumen, datos rapidos y perfil de busqueda.</p>
+            <p>Portada, resumen principal, datos rápidos, links personales y CV.</p>
           </article>
           <article>
             <span>02</span>
             <strong>Proyectos</strong>
-            <p>Nombre, objetivo, aprendizaje, proximo paso, tecnologias, imagen, demo y repositorio.</p>
+            <p>Nombre, objetivo, aprendizaje, próximo paso, tecnologías, imagen, demo y repositorio.</p>
           </article>
           <article>
             <span>03</span>
             <strong>Cursos y habilidades</strong>
-            <p>Agregar avances de aprendizaje, herramientas y proximos focos.</p>
+            <p>Agregar avances de aprendizaje, herramientas y próximos focos.</p>
           </article>
           <article>
             <span>04</span>
@@ -72,30 +73,65 @@
         </div>
       </section>
 
+      <section class="admin-guide" aria-label="Guia para subir CV">
+        <h2>Cómo subir o cambiar el CV</h2>
+        <div class="guide-grid">
+          <article>
+            <span>01</span>
+            <strong>Abrir Perfil</strong>
+            <p>Entrá a Editar contenido y abrí la sección Perfil.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Subir PDF</strong>
+            <p>En Subir CV en PDF elegí el archivo desde tu computadora.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Guardar cambios</strong>
+            <p>Guardá y publicá. El archivo queda dentro del sitio, no como ruta de tu PC.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <strong>Revisar web</strong>
+            <p>En la vista pública, los botones de CV lo abren para ver o descargar.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="admin-guide" aria-label="Guia para cargar proyectos">
-        <h2>Como cargar un proyecto</h2>
+        <h2>Cómo cargar un proyecto</h2>
         <div class="guide-grid">
           <article>
             <span>01</span>
             <strong>Crear repositorio</strong>
-            <p>Subi el codigo a GitHub y copia el link del repositorio.</p>
+            <p>Subí el código a GitHub y copiá el link del repositorio.</p>
           </article>
           <article>
             <span>02</span>
             <strong>Completar ficha</strong>
-            <p>En el editor agrega nombre, estado, tipo, descripcion y tecnologias.</p>
+            <p>En el editor agregá nombre, estado, tipo, descripción y tecnologías.</p>
           </article>
           <article>
             <span>03</span>
             <strong>Sumar evidencia</strong>
-            <p>Pega el link del repositorio y, si existe, el link de la demo publicada.</p>
+            <p>Pegá el link del repositorio y, si existe, el link de la demo publicada.</p>
           </article>
           <article>
             <span>04</span>
             <strong>Imagen opcional</strong>
-            <p>Subi una captura liviana si queres mostrar como se ve el proyecto.</p>
+            <p>Subí una captura liviana si querés mostrar cómo se ve el proyecto.</p>
           </article>
         </div>
+      </section>
+
+      <section class="admin-guide checklist" aria-label="Checklist antes de publicar">
+        <h2>Antes de publicar</h2>
+        <ul>
+          <li>Revisá que los enlaces abran: CV, GitHub, LinkedIn, Gmail y WhatsApp.</li>
+          <li>Si subís imágenes o CV, esperá a que el editor termine la carga antes de guardar.</li>
+          <li>Después de guardar, entrá a Ver web y confirmá que el cambio se vea bien.</li>
+        </ul>
       </section>
     </main>
   </body>

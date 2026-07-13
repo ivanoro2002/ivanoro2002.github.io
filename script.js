@@ -260,7 +260,7 @@ const createLink = ({ label, href, kind = "ghost", disabled = false, icon = "ext
     link.setAttribute("aria-disabled", "true");
   } else {
     link.href = href;
-    if (href.startsWith("http")) {
+    if (shouldOpenInNewTab(href)) {
       link.target = "_blank";
       link.rel = "noopener noreferrer";
     }
@@ -268,6 +268,18 @@ const createLink = ({ label, href, kind = "ghost", disabled = false, icon = "ext
 
   return link;
 };
+
+const isCvProfileLink = (item) => {
+  const label = (item.label || "").toLowerCase();
+  return item.icon === "download" || label === "cv" || label.includes("curriculum");
+};
+
+const resolveProfileHref = (item) => {
+  if (isCvProfileLink(item) && data.profile?.cvUrl) return data.profile.cvUrl;
+  return item.href || "";
+};
+
+const shouldOpenInNewTab = (href = "") => href.startsWith("http") || /\.pdf($|\?)/i.test(href);
 
 const fillText = (selector, text) => {
   const element = select(selector);
@@ -295,7 +307,6 @@ const renderHero = () => {
     item.innerHTML = `<dt>${fact.label}</dt><dd>${fact.value}</dd>`;
     quickFacts.append(item);
   });
-
   const focusList = select("#focus-list");
   (data.focus || []).forEach((item) => {
     const row = document.createElement("div");
@@ -303,7 +314,6 @@ const renderHero = () => {
     row.innerHTML = `<i class="focus-dot" aria-hidden="true"></i><span>${item}</span>`;
     focusList.append(row);
   });
-
   const signal = select("#hero-signal");
   const skillCount = (data.skills || []).reduce((total, category) => total + (category.items || []).length, 0);
   const signals = [
@@ -387,7 +397,7 @@ const renderProjects = () => {
     const projectDetails = [
       { label: "Objetivo", text: project.problem },
       { label: "Aprendizaje", text: project.learning },
-      { label: "Proximo paso", text: project.nextStep },
+      { label: "Próximo paso", text: project.nextStep },
     ]
       .filter((detail) => detail.text)
       .map(
@@ -418,7 +428,7 @@ const renderProjects = () => {
       ${image}
       <p>${project.description}</p>
       ${projectDetails ? `<div class="project-details">${projectDetails}</div>` : ""}
-      <ul class="tag-list" aria-label="Tecnologias usadas">${tags}</ul>
+      <ul class="tag-list" aria-label="Tecnologías usadas">${tags}</ul>
       <div class="project-links">${links}</div>
     `;
 
@@ -512,13 +522,14 @@ const renderProfiles = () => {
   const actions = select("#profile-actions");
   (data.profileLinks || []).forEach((item) => {
     const link = document.createElement("a");
+    const href = resolveProfileHref(item);
     link.className = `profile-action ${item.icon || ""}`;
-    link.href = item.href || "#";
+    link.href = href || "#";
 
-    if (!item.href) {
+    if (!href) {
       link.setAttribute("aria-disabled", "true");
       link.classList.add("disabled");
-    } else if (item.href.startsWith("http")) {
+    } else if (shouldOpenInNewTab(href)) {
       link.target = "_blank";
       link.rel = "noopener noreferrer";
     }

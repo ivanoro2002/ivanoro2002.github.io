@@ -13,7 +13,7 @@ display_url: "https://ivan-portafolioit.netlify.app"
 collections:
   - name: "portfolio"
     label: "Portafolio"
-    description: "Edita los textos, proyectos, habilidades, cursos, links y datos visibles del portafolio."
+    description: "Editor privado para cambiar la web pública. Guardás, publicás y Netlify actualiza el sitio."
     editor:
       preview: false
     files:
@@ -26,24 +26,33 @@ collections:
             name: "profile"
             widget: "object"
             collapsed: false
-            hint: "Datos principales que aparecen en el inicio, enlaces y contacto."
+            hint: "Inicio de la web: nombre, rol, resumen, enlaces principales y CV. Si cambias el CV acá, se actualizan los botones públicos de CV."
             fields:
-              - { label: "Nombre", name: "name", widget: "string" }
-              - { label: "Rol", name: "role", widget: "string" }
-              - { label: "Ubicacion", name: "location", widget: "string" }
-              - { label: "Correo", name: "email", widget: "string" }
-              - { label: "Telefono", name: "phone", widget: "string", required: false }
-              - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
-              - { label: "GitHub", name: "github", widget: "string" }
-              - { label: "LinkedIn", name: "linkedin", widget: "string" }
-              - { label: "CV", name: "cvUrl", widget: "file", required: false }
-              - { label: "Resumen", name: "summary", widget: "text" }
+              - { label: "Nombre completo", name: "name", widget: "string", hint: "Aparece grande en la portada." }
+              - { label: "Rol o título profesional", name: "role", widget: "string", hint: "Aparece arriba del nombre. Ejemplo: Estudiante de Programación | Perfil inicial IT." }
+              - { label: "Ubicación", name: "location", widget: "string", hint: "Ciudad o zona general." }
+              - { label: "Correo", name: "email", widget: "string", hint: "Correo principal para contacto laboral." }
+              - { label: "Teléfono", name: "phone", widget: "string", required: false, hint: "Opcional. Si no querés mostrarlo, podés dejarlo vacáo." }
+              - { label: "Link de WhatsApp", name: "whatsapp", widget: "string", required: false, hint: "Link completo de wa.me. Se usa para contacto rápido." }
+              - { label: "GitHub", name: "github", widget: "string", hint: "Link completo de tu GitHub." }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", hint: "Link completo de tu perfil de LinkedIn." }
+              - label: "Subir CV en PDF"
+                name: "cvUrl"
+                widget: "file"
+                required: false
+                media_folder: "assets/cv"
+                public_folder: "assets/cv"
+                media_library:
+                  config:
+                    multiple: false
+                hint: "Apretá Elegir archivo/Subir, seleccioná el PDF desde tu computadora y guardá. No pegues una ruta local de Windows; el archivo debe quedar guardado dentro del sitio."
+              - { label: "Resumen de portada", name: "summary", widget: "text", hint: "Texto breve debajo del nombre: qué estudiás, qué estás buscando y qué te interesa." }
 
           - label: "Apariencia"
             name: "appearance"
             widget: "object"
             collapsed: false
-            hint: "Cambia el color general del sitio publico sin agregar peso ni funciones extra."
+            hint: "Color general de la web pública. Solo cambia la apariencia; no hace más pesada la página."
             fields:
               - label: "Tema de color"
                 name: "theme"
@@ -53,18 +62,18 @@ collections:
                   - { label: "Verde menta + grafito", value: "green" }
                   - { label: "Azul tech + verde", value: "blue" }
                   - { label: "Violeta creativo + verde", value: "violet" }
-                  - { label: "Ambar calido + azul", value: "amber" }
+                  - { label: "Ámbar cálido + azul", value: "amber" }
                   - { label: "Coral suave + celeste", value: "coral" }
-                  - { label: "Rojo rubi + celeste", value: "ruby" }
-                  - { label: "Indigo elegante + cian", value: "indigo" }
-                hint: "Elegis uno, guardas y el cambio se ve en la web publica despues de publicar."
+                  - { label: "Rojo rubí + celeste", value: "ruby" }
+                  - { label: "Índigo elegante + cian", value: "indigo" }
+                hint: "Elegís uno, guardás y el cambio se ve en la web pública después de publicar."
 
-          - label: "Datos rapidos"
+          - label: "Datos rápidos"
             name: "quickFacts"
             widget: "list"
             summary: "{{fields.label}}: {{fields.value}}"
             minimize_collapsed: true
-            hint: "Tarjetas pequenas debajo de la presentacion principal."
+            hint: "Tarjetas pequeñas debajo de la portada. Sirven para datos cortos como ubicación, perfil o carrera."
             fields:
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Valor", name: "value", widget: "string" }
@@ -74,14 +83,14 @@ collections:
             widget: "list"
             summary: "{{fields.item}}"
             minimize_collapsed: true
-            hint: "Puntos breves del panel de objetivo actual."
+            hint: "Puntos breves del panel lateral de la portada. Explican en qué estás enfocado ahora."
             field: { label: "Texto", name: "item", widget: "string" }
 
-          - label: "Sobre mi"
+          - label: "Sobre mí"
             name: "about"
             widget: "object"
             collapsed: false
-            hint: "Texto principal para explicar quien sos, que estudias y que estas buscando."
+            hint: "Sección Sobre mí. Explica quién sos, qué estudiás, qué buscás y cómo estás construyendo tu perfil."
             fields:
               - { label: "Texto principal", name: "main", widget: "text" }
               - { label: "Texto secundario", name: "secondary", widget: "text" }
@@ -91,68 +100,77 @@ collections:
             widget: "list"
             summary: "{{fields.label}}: {{fields.value}}"
             minimize_collapsed: true
-            hint: "Tres tarjetas cortas debajo de Sobre mi."
+            hint: "Tres tarjetas cortas debajo de Sobre mí. Mantenerlo breve para que se lea rápido."
             fields:
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Valor", name: "value", widget: "string" }
 
-          - label: "Perfil de busqueda"
+          - label: "Perfil de búsqueda"
             name: "opportunityCards"
             widget: "list"
             summary: "{{fields.label}} - {{fields.title}}"
             minimize_collapsed: true
-            hint: "Tarjetas para explicar roles objetivo, valor actual y disponibilidad."
+            hint: "Sección Objetivo. Sirve para explicar roles que buscás, qué podés aportar y disponibilidad."
             fields:
               - { label: "Etiqueta", name: "label", widget: "string" }
-              - { label: "Titulo", name: "title", widget: "string" }
-              - { label: "Descripcion", name: "description", widget: "text" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
 
           - label: "Proyectos"
             name: "projects"
             widget: "list"
             summary: "{{fields.name}} - {{fields.status}}"
             minimize_collapsed: true
-            hint: "Carga una ficha por proyecto. El codigo normalmente queda en GitHub; aca van la explicacion, tecnologias, imagen opcional, demo y repositorio."
+            hint: "Sección Proyectos. Acá cargás fichas, no el proyecto entero. El código va en GitHub; acá van explicación, tecnologías, imagen, demo y repositorio."
             fields:
               - { label: "Nombre", name: "name", widget: "string", hint: "Ejemplo: Gestor de tareas, Calculadora Java, Portafolio web." }
               - label: "Estado"
                 name: "status"
                 widget: "select"
                 default: "En desarrollo"
-                options: ["En desarrollo", "Activo", "Terminado", "Universitario", "Practica", "En pausa"]
+                options: ["En desarrollo", "Activo", "Terminado", "Universitario", "Práctica", "En pausa"]
                 hint: "Sirve para que quien mira sepa si es practica, universitario o proyecto activo."
               - label: "Tipo"
                 name: "type"
                 widget: "select"
-                default: "Practica"
-                options: ["Frontend", "Backend", "Full stack", "Escritorio", "Estructuras de datos", "Base de datos", "QA / Testing", "Practica"]
-                hint: "Tambien se usa para los filtros visibles de la web."
-              - { label: "Descripcion", name: "description", widget: "text", hint: "Resumen corto: que hace el proyecto y con que enfoque fue construido." }
-              - { label: "Problema u objetivo", name: "problem", widget: "text", required: false, hint: "Que problema resuelve o que practica querias demostrar." }
-              - { label: "Aprendizaje", name: "learning", widget: "text", required: false, hint: "Que aprendiste: POO, DOM, SQL, Git, diseno responsive, etc." }
-              - { label: "Proximo paso", name: "nextStep", widget: "text", required: false, hint: "Mejora pendiente: README, capturas, demo, validaciones, login, base de datos." }
-              - { label: "Imagen", name: "image", widget: "image", required: false, hint: "Opcional. Puede ser una captura del proyecto. Se guarda en assets/uploads." }
-              - label: "Tecnologias"
+                default: "Práctica"
+                options: ["Frontend", "Backend", "Full stack", "Escritorio", "Estructuras de datos", "Base de datos", "QA / Testing", "Práctica"]
+                hint: "También se usa para los filtros visibles de la web."
+              - { label: "Descripción", name: "description", widget: "text", hint: "Resumen corto: qué hace el proyecto y con qué enfoque fue construido." }
+              - { label: "Problema u objetivo", name: "problem", widget: "text", required: false, hint: "Qué problema resuelve o qué práctica querías demostrar." }
+              - { label: "Aprendizaje", name: "learning", widget: "text", required: false, hint: "Qué aprendiste: POO, DOM, SQL, Git, diseño responsive, etc." }
+              - { label: "Próximo paso", name: "nextStep", widget: "text", required: false, hint: "Mejora pendiente: README, capturas, demo, validaciones, login, base de datos." }
+              - label: "Imagen o captura"
+                name: "image"
+                widget: "image"
+                required: false
+                media_folder: "assets/uploads"
+                public_folder: "assets/uploads"
+                media_library:
+                  config:
+                    multiple: false
+                hint: "Opcional. Subí una captura liviana desde tu computadora. Ideal: PNG/JPG horizontal, no muy pesado."
+              - label: "Tecnologías"
                 name: "tags"
                 widget: "list"
                 summary: "{{fields.tag}}"
                 minimize_collapsed: true
-                hint: "Agrega una tecnologia por item: HTML, CSS, JavaScript, Java, Python, SQL, Git."
-                field: { label: "Tecnologia", name: "tag", widget: "string" }
+                hint: "Agregá una tecnología por item: HTML, CSS, JavaScript, Java, Python, SQL, Git."
+                field: { label: "Tecnología", name: "tag", widget: "string" }
               - label: "Enlaces"
                 name: "links"
                 widget: "list"
                 summary: "{{fields.label}}"
                 minimize_collapsed: true
-                hint: "Lo ideal es cargar al menos el repositorio de GitHub. Si no hay demo todavia, deja ese enlace vacio o no lo agregues."
+                hint: "Lo ideal es cargar al menos el repositorio de GitHub. Si no hay demo todavía, dejá ese enlace vacáo o no lo agregués."
                 fields:
                   - label: "Texto"
                     name: "label"
                     widget: "select"
-                    options: ["Repositorio", "Ver demo", "Ver sitio", "Demo pendiente", "Documentacion"]
-                    hint: "Texto que aparece en el boton."
-                  - { label: "Enlace", name: "href", widget: "string", required: false, hint: "Pega la URL de GitHub, Netlify, Vercel, GitHub Pages o documentacion." }
-                  - label: "Icono"
+                    options: ["Repositorio", "Ver demo", "Ver sitio", "Demo pendiente", "Documentación"]
+                    hint: "Texto que aparece en el botón."
+                  - { label: "Enlace", name: "href", widget: "string", required: false, hint: "Pega la URL de GitHub, Netlify, Vercel, GitHub Pages o documentación." }
+                  - label: "Ícono"
                     name: "icon"
                     widget: "select"
                     default: "external"
@@ -166,66 +184,86 @@ collections:
             widget: "list"
             summary: "{{fields.label}}"
             minimize_collapsed: true
-            hint: "Categorias de habilidades. Los iconos disponibles son textos como python, java, html, css, github, react."
+            hint: "Sección Habilidades. Cada categoría aparece como pestaña: Base actual, Herramientas, Próximo foco, Competencias."
             fields:
-              - { label: "ID", name: "id", widget: "string" }
-              - { label: "Titulo", name: "label", widget: "string" }
+              - { label: "ID interno", name: "id", widget: "string", hint: "No cambiar si ya existe. Identifica la pestaña por dentro." }
+              - { label: "Título visible", name: "label", widget: "string", hint: "Nombre de la pestaña que ve el visitante." }
               - label: "Items"
                 name: "items"
                 widget: "list"
                 summary: "{{fields.name}}"
                 minimize_collapsed: true
                 fields:
-                  - { label: "Nombre", name: "name", widget: "string" }
-                  - { label: "Nota", name: "note", widget: "text" }
-                  - { label: "Icono", name: "icon", widget: "string", required: false }
-                  - { label: "Color", name: "accent", widget: "string", required: false }
+                  - { label: "Nombre", name: "name", widget: "string", hint: "Ejemplo: Java, GitHub, Trabajo en equipo." }
+                  - { label: "Nota", name: "note", widget: "text", hint: "Descripción corta de cómo usás esa habilidad." }
+                  - label: "Ícono"
+                    name: "icon"
+                    widget: "select"
+                    required: false
+                    options: ["python", "java", "html", "css", "database", "git", "github", "vscode", "office", "deploy", "javascript", "react", "server", "testing", "check", "team", "adapt", "problem", "spark"]
+                    hint: "Elegí un Ícono de la lista para evitar errores de tipeo."
+                  - { label: "Color del Ícono", name: "accent", widget: "color", required: false, hint: "Color de la tarjeta e Ícono. Si dudás, dejá el que ya está." }
 
           - label: "Cursos y aprendizaje"
             name: "learning"
             widget: "list"
             summary: "{{fields.status}} - {{fields.title}}"
             minimize_collapsed: true
-            hint: "Cursos terminados, en progreso o proximos. Ideal para Udemy, GitHub, ingles y practica."
+            hint: "Sección Cursos. Carga cursos realizados, en progreso o próximos aprendizajes relevantes."
             fields:
               - { label: "Estado", name: "status", widget: "string" }
-              - { label: "Titulo", name: "title", widget: "string" }
-              - { label: "Institucion o plataforma", name: "provider", widget: "string" }
-              - { label: "Descripcion", name: "description", widget: "text" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Institución o plataforma", name: "provider", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
 
-          - label: "Formacion y linea de tiempo"
+          - label: "Formación y línea de tiempo"
             name: "timeline"
             widget: "list"
             summary: "{{fields.period}} - {{fields.title}}"
             minimize_collapsed: true
-            hint: "Linea de tiempo: universidad, cursos, idiomas y objetivo profesional."
+            hint: "Sección Formación. Línea de tiempo para universidad, cursos, idiomas y objetivo profesional."
             fields:
-              - { label: "Periodo", name: "period", widget: "string" }
-              - { label: "Titulo", name: "title", widget: "string" }
-              - { label: "Descripcion", name: "description", widget: "text" }
+              - { label: "Período", name: "period", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
 
           - label: "Perfiles"
             name: "profileLinks"
             widget: "list"
             summary: "{{fields.label}}"
             minimize_collapsed: true
-            hint: "Botones grandes hacia GitHub, LinkedIn y CV."
+            hint: "Sección Perfiles. GitHub y LinkedIn usan sus links. El botón CV usa automáticamente el archivo cargado en Perfil > Subir CV en PDF."
             fields:
-              - { label: "Etiqueta", name: "label", widget: "string" }
-              - { label: "Descripcion", name: "description", widget: "text" }
-              - { label: "Texto del boton", name: "cta", widget: "string" }
-              - { label: "Enlace", name: "href", widget: "string", required: false }
-              - { label: "Icono", name: "icon", widget: "string", required: false }
+              - { label: "Etiqueta", name: "label", widget: "string", hint: "Ejemplo: GitHub, LinkedIn, CV." }
+              - { label: "Descripción", name: "description", widget: "text", hint: "Texto corto que explica qué encuentra el visitante ahí." }
+              - { label: "Texto del botón", name: "cta", widget: "string", hint: "Ejemplo: Abrir, Descargar." }
+              - { label: "Enlace", name: "href", widget: "string", required: false, hint: "Para GitHub/LinkedIn pega el link. Para CV podés dejarlo igual: la web usa automáticamente Perfil > CV." }
+              - label: "Ícono"
+                name: "icon"
+                widget: "select"
+                required: false
+                options:
+                  - { label: "GitHub", value: "github" }
+                  - { label: "LinkedIn", value: "linkedin" }
+                  - { label: "Descarga / CV", value: "download" }
+                  - { label: "Enlace externo", value: "external" }
 
           - label: "Contacto"
             name: "contactLinks"
             widget: "list"
             summary: "{{fields.label}}"
             minimize_collapsed: true
-            hint: "Botones de contacto del pie de pagina, como Gmail y WhatsApp."
+            hint: "Sección Contacto del pie de página. Ideal para Gmail y WhatsApp."
             fields:
-              - { label: "Texto", name: "label", widget: "string" }
-              - { label: "Detalle", name: "detail", widget: "string", required: false }
-              - { label: "Icono", name: "icon", widget: "string", required: false }
-              - { label: "Enlace", name: "href", widget: "string", required: false }
-              - { label: "Accesibilidad", name: "ariaLabel", widget: "string", required: false }
+              - { label: "Texto", name: "label", widget: "string", hint: "Ejemplo: Enviar email, Escribir por WhatsApp." }
+              - { label: "Detalle", name: "detail", widget: "string", required: false, hint: "Texto chico debajo del botón." }
+              - label: "Ícono"
+                name: "icon"
+                widget: "select"
+                required: false
+                options:
+                  - { label: "Mail", value: "mail" }
+                  - { label: "WhatsApp", value: "whatsapp" }
+                  - { label: "Enlace externo", value: "external" }
+              - { label: "Enlace", name: "href", widget: "string", required: false, hint: "Link completo. Gmail puede usar https://mail.google.com/mail/?view=cm&fs=1&to=tuemail." }
+              - { label: "Texto accesible", name: "ariaLabel", widget: "string", required: false, hint: "Descripción para lectores de pantalla. Ejemplo: Enviar email a Iván." }

@@ -1,78 +1,30 @@
-# Portafolio personal de Ivan
+# Portafolio IT - Iván Valicenti
 
-Esta carpeta contiene una version estatica y liviana del portafolio. Esta publicada gratis en Netlify y conectada a GitHub para usar el modo admin con Decap CMS.
+Sitio web personal creado para presentar mi perfil inicial en IT, mis proyectos, habilidades, formación, CV y canales de contacto profesional.
 
-## Archivos principales
+La web está pensada como una carta de presentación clara y rápida para reclutadores, empresas y equipos que busquen perfiles trainee, junior inicial, soporte, QA inicial o desarrollo web.
 
-- `index.html`: estructura de la pagina.
-- `styles.css`: diseno visual, responsive y animaciones.
-- `content/portfolio.json`: datos editables del portafolio.
-- `script.js`: renderizado de secciones, menu movil y animaciones.
-- `assets/portfolio-hero.png`: imagen principal.
-- `admin/index.html`: panel privado de entrada.
-- `admin/cms.html`: editor de contenido con Decap CMS.
-- `admin/config.yml`: campos editables desde el admin.
-- `GUIA-PROYECTOS.md`: guia simple para cargar proyectos en el portafolio.
-- `MODO-ADMIN.md`: explicacion del modo admin.
+## Web publicada
 
-## Como editar datos
-
-La mayoria del contenido esta en `content/portfolio.json`.
-
-Para cambiar email, GitHub, LinkedIn, resumen, perfil de busqueda, habilidades o proyectos, edita ese archivo.
-
-Para agregar el CV:
-
-1. Guarda el PDF dentro de `assets/`, por ejemplo `assets/cv-ivan-valicenti.pdf`.
-2. En `content/portfolio.json`, cambia:
-
-```js
-cvUrl: "",
-```
-
-por:
-
-```js
-cvUrl: "assets/cv-ivan-valicenti.pdf",
-```
-
-## Como agregar un proyecto
-
-En `content/portfolio.json`, dentro de `projects`, copia un bloque de proyecto y cambia:
-
-- `name`
-- `status`
-- `type`
-- `description`
-- `tags`
-- `links`
-
-## Publicacion gratuita actual
-
-La publicacion actual esta en Netlify:
-
-```text
 https://ivan-portafolioit.netlify.app/
-```
 
-El admin esta en:
+## Contenido principal
 
-```text
-https://ivan-portafolioit.netlify.app/admin/
-```
+- Presentación profesional.
+- Objetivo laboral.
+- Proyectos destacados.
+- Habilidades técnicas y herramientas.
+- Cursos, formación y próximos aprendizajes.
+- Links a GitHub, LinkedIn, CV, email y WhatsApp.
 
-## Acceso publico y edicion
+## Tecnologías
 
-La web publicada es de solo lectura para visitantes. Cualquier persona con el link puede verla y tocar enlaces de contacto, pero no puede editar el contenido ni subir proyectos.
+- HTML
+- CSS
+- JavaScript
+- Netlify
+- Decap CMS
 
-La edicion se hace desde `/admin/` con Netlify Identity y Git Gateway. Solo una cuenta autorizada puede guardar cambios reales en el repositorio.
+## Estado
 
-## Pendientes para cerrar la primera version
-
-- Confirmar si el email visible es el definitivo.
-- CV en PDF agregado en `assets/cv-ivan-valicenti.pdf`.
-- Confirmar si el telefono o WhatsApp debe quedar publico en la version final.
-- Reemplazar proyectos provisorios por proyectos reales con repositorio y demo.
-- Completar disponibilidad horaria.
-- Agregar cursos/certificados reales cuando existan.
-- La experiencia del kiosco esta en el CV, pero no se muestra como experiencia dentro de la web por decision del titular.
+Portfolio en evolución. El contenido se irá actualizando con nuevos proyectos, mejoras visuales, cursos y avances de aprendizaje.
